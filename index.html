@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b4bb3">
+<meta name="description" content="Balaji Digital Seva – Digital and online services in Bhatapara.">
+<title>Balaji Digital Seva | Deepak Mishra</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/logo.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top">
+  <div class="brand-mini"><span class="live-dot"></span><b data-en="Digital Service Center" data-hi="Digital Service Center">Digital Service Center</b></div>
+  <div class="top-actions">
+    <button class="lang-btn" id="lang" aria-label="Change language">हिं / EN</button>
+    <button id="theme" aria-label="Toggle dark mode">☾</button>
+  </div>
+</div>
+
+<header>
+  <span class="badge" data-en="CSC • DIGITAL SEVA" data-hi="CSC • DIGITAL SEVA">CSC • DIGITAL SEVA</span>
+  <div class="logo-wrap"><img src="assets/logo.svg" class="logo" alt="Balaji Digital Seva logo"></div>
+  <p class="eyebrow" data-en="WELCOME TO" data-hi="SWAGAT HAI">WELCOME TO</p>
+  <h1>Balaji Digital Seva</h1>
+  <h3>Deepak Mishra <i>• VLE</i></h3>
+  <p class="tag" data-en="Your trusted digital service center in Bhatapara." data-hi="Bhatapara mein aapka trusted digital service center.">Your trusted digital service center in Bhatapara.</p>
+  <div class="actions">
+    <a class="btn blue" href="tel:+917999276798">☎ <span data-en="Call" data-hi="Call Karein">Call</span></a>
+    <a class="btn green" id="wa1">◉ WhatsApp</a>
+    <a class="btn" href="https://www.instagram.com/balajidigitalseva/" target="_blank" rel="noopener">◎ Instagram</a>
+    <a class="btn" href="contact.vcf">＋ <span data-en="Save Contact" data-hi="Contact Save Karein">Save Contact</span></a>
+    <button class="btn" id="share">↗ <span data-en="Share" data-hi="Share Karein">Share</span></button>
+  </div>
+  <button id="installBtn" class="install-hero" hidden>＋ <span data-en="Add Balaji Digital Seva to Home Screen" data-hi="Balaji Digital Seva ko Home Screen par Add Karein">Add Balaji Digital Seva to Home Screen</span></button>
+</header>
+
+<section class="quick">
+  <div><span class="quick-icon">✓</span><b data-en="Trusted Service" data-hi="Trusted Service">Trusted Service</b><small data-en="Friendly assistance for everyday digital and online work." data-hi="Daily digital aur online kaam mein friendly assistance.">Friendly assistance for everyday digital and online work.</small></div>
+  <div><span class="quick-icon">⚡</span><b data-en="Quick Assistance" data-hi="Quick Assistance">Quick Assistance</b><small data-en="Forms, documents and digital services handled efficiently." data-hi="Forms, documents aur digital services ki easy assistance.">Forms, documents and digital services handled efficiently.</small></div>
+  <div><span class="quick-icon">📍</span><b data-en="Local Center" data-hi="Local Center">Local Center</b><small data-en="Water Filter Complex, Naka No. 1, Bhatapara." data-hi="Water Filter Complex, Naka No. 1, Bhatapara.">Water Filter Complex, Naka No. 1, Bhatapara.</small></div>
+</section>
+<section class="hero-notice-board" id="hero-notice-board" aria-label="Latest Updates">
+  <div class="hnb-head"><div><span class="hnb-label">🔔 LATEST UPDATES</span><h2>Latest Updates</h2></div><span class="hnb-live">● LIVE</span></div>
+  <div class="hnb-slider">
+    <article class="hnb-item active"><div class="hnb-icon">🆕</div><div class="hnb-content"><span class="hnb-tag service">NEW SERVICE</span><h3>New Service Started</h3><p>Balaji Digital Seva par nayi digital service available hai.</p><small>Latest Update</small></div></article>
+    <article class="hnb-item"><div class="hnb-icon">💼</div><div class="hnb-content"><span class="hnb-tag job">JOB ALERT</span><h3>Latest Job Updates</h3><p>Nayi government aur private job updates ke liye notice check karein.</p><small>Latest Update</small></div></article>
+    <article class="hnb-item"><div class="hnb-icon">📢</div><div class="hnb-content"><span class="hnb-tag notice">IMPORTANT NOTICE</span><h3>Balaji Digital Seva Notice</h3><p>Important service updates aur center notices yahan milenge.</p><small>Latest Update</small></div></article>
+  </div>
+  <div class="hnb-controls"><button type="button" class="hnb-prev" aria-label="Previous update">‹</button><div class="hnb-dots"><button type="button" class="active"></button><button type="button"></button><button type="button"></button></div><button type="button" class="hnb-next" aria-label="Next update">›</button></div>
+</section>
+
+
+<main>
+<section id="services">
+  <p class="eyebrow" data-en="OUR SERVICES" data-hi="HAMARI SERVICES">OUR SERVICES</p>
+  <h2 data-en="Services we provide" data-hi="Hum kaun-kaun si services dete hain">Services we provide</h2>
+  <p class="muted" data-en="Tap any service to see available work and required documents." data-hi="Kisi bhi service par tap karke kaam aur required documents dekhein.">Tap any service to see available work and required documents.</p>
+  <div class="search">⌕ <input id="search" data-placeholder-en="Search PAN, Aadhaar, Ayushman..." data-placeholder-hi="PAN, Aadhaar, Ayushman search karein..." placeholder="Search PAN, Aadhaar, Ayushman..." aria-label="Search services"></div>
+  <div id="chips" class="chips"></div>
+  <div id="grid" class="grid"></div>
+</section>
+
+<section id="gallery">
+  <p class="eyebrow" data-en="GALLERY" data-hi="GALLERY">GALLERY</p>
+  <h2 data-en="Our Center" data-hi="Hamara Center">Our Center</h2>
+  <p class="muted" data-en="Center photos can be added here later." data-hi="Center ki photos yahan baad mein add ki ja sakti hain.">Center photos can be added here later.</p>
+  <div class="gallery"><span>📸</span><b data-en="Gallery coming soon" data-hi="Gallery jald hi">Gallery coming soon</b><small data-en="Add your shop and service photos inside assets/gallery/." data-hi="Apni shop aur service photos assets/gallery/ mein add karein.">Add your shop and service photos inside assets/gallery/.</small></div>
+</section>
+
+<section id="reviews">
+  <p class="eyebrow" data-en="CUSTOMER EXPERIENCE" data-hi="CUSTOMER EXPERIENCE">CUSTOMER EXPERIENCE</p>
+  <h2 data-en="What customers value" data-hi="Customers ko kya pasand hai">What customers value</h2>
+  <div class="reviews">
+    <article>★★★★★<p data-en="Helpful service and easy communication." data-hi="Helpful service aur easy communication.">“Helpful service and easy communication.”</p><b>Local Customer</b></article>
+    <article>★★★★★<p data-en="Quick assistance for online work." data-hi="Online kaam ke liye quick assistance.">“Quick assistance for online work.”</p><b>Local Customer</b></article>
+    <article>★★★★★<p data-en="Convenient and friendly digital services." data-hi="Convenient aur friendly digital services.">“Convenient and friendly digital services.”</p><b>Local Customer</b></article>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div>
+    <p class="eyebrow" data-en="CONTACT" data-hi="CONTACT">CONTACT</p>
+    <h2 data-en="Need digital assistance?" data-hi="Digital assistance chahiye?">Need digital assistance?</h2>
+    <p data-en="Reach Balaji Digital Seva directly." data-hi="Balaji Digital Seva se directly contact karein.">Reach Balaji Digital Seva directly.</p>
+    <a class="btn white" href="tel:+917999276798">☎ <span data-en="Call Now" data-hi="Call Karein">Call Now</span></a>
+    <a class="btn white" id="wa2">◉ WhatsApp</a>
+    <a class="btn white" href="https://www.google.com/maps/search/?api=1&query=Water+Filter+Complex%2C+Naka+No.+1%2C+Bhatapara%2C+Chhattisgarh" target="_blank" rel="noopener">📍 <span data-en="Directions" data-hi="Directions">Directions</span></a>
+  </div>
+  <div class="details">
+    <b>PHONE<br><span>7999276798</span></b>
+    <b>EMAIL<br><span>balajidigital.byt@gmail.com</span></b>
+    <b>ADDRESS<br><span>Water Filter Complex, Naka No. 1, Bhatapara, Dist. Balodabazar (C.G.)</span></b>
+    <b data-en="HOURS" data-hi="TIMING">HOURS<br><span>Sunday to Saturday • 10:00 AM – 10:00 PM</span></b>
+  </div>
+</section>
+</main>
+
+
+<section class="install-section" id="installApp">
+  <div class="install-icon">📲</div>
+  <div class="install-copy">
+    <p class="eyebrow">MOBILE APP</p>
+    <h2>Add Balaji Digital Seva to Home Screen</h2>
+    <p>Website ko mobile me app ki tarah use karein. Ek tap me Home Screen par add karein.</p>
+  </div>
+  <button class="btn install-btn" id="installBtn">＋ Add to Home Screen</button>
+</section>
+
+
+<div class="map-address-row">
+  <span>📍 Water Filter Complex, Naka No. 1, Bhatapara</span>
+  <a href="https://maps.app.goo.gl/2zhiAr86G5BY8EHH6" target="_blank" rel="noopener">Get Directions</a>
+</div>
+
+<footer><b>Balaji Digital Seva</b><span>Deepak Mishra • VLE</span><span>© <span id="year"></span></span></footer>
+<nav aria-label="Bottom navigation">
+  <a href="#">⌂<small data-en="Home" data-hi="Home">Home</small></a>
+  <a href="#services">▦<small data-en="Services" data-hi="Services">Services</small></a>
+  <a href="#gallery">▧<small data-en="Gallery" data-hi="Gallery">Gallery</small></a>
+  <a href="#contact">☎<small data-en="Contact" data-hi="Contact">Contact</small></a>
+</nav>
+
+<div id="modal" class="overlay" aria-hidden="true">
+  <div class="modal">
+    <button id="close" aria-label="Close">×</button>
+    <div id="mi" class="mi"></div>
+    <p id="mc" class="eyebrow"></p>
+    <h2 id="mt"></h2>
+    <h4 data-en="Services available" data-hi="Available services">Services available</h4>
+    <ul id="ma"></ul>
+    <div id="docsBox">
+      <h4>📋 <span data-en="Required Documents" data-hi="Required Documents">Required Documents</span></h4>
+      <ul id="md"></ul>
+    </div>
+    <div id="mn" class="note"></div>
+    <div class="modalactions">
+      <a id="mw" class="btn green">◉ <span data-en="Enquire on WhatsApp" data-hi="WhatsApp par Enquiry Karein">Enquire on WhatsApp</span></a>
+      <a class="btn blue" href="tel:+917999276798">☎ <span data-en="Call Now" data-hi="Call Karein">Call Now</span></a>
+    </div>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+
+<script>
+(function(){const b=document.getElementById("hero-notice-board");if(!b)return;const a=[...b.querySelectorAll(".hnb-item")],d=[...b.querySelectorAll(".hnb-dots button")];let i=0,t;function s(n){i=(n+a.length)%a.length;a.forEach((x,j)=>x.classList.toggle("active",j===i));d.forEach((x,j)=>x.classList.toggle("active",j===i))}function r(){clearInterval(t);t=setInterval(()=>s(i+1),5000)}b.querySelector(".hnb-next").onclick=()=>{s(i+1);r()};b.querySelector(".hnb-prev").onclick=()=>{s(i-1);r()};d.forEach((x,j)=>x.onclick=()=>{s(j);r()});r()})();
+</script>
+</body>
+</html>
