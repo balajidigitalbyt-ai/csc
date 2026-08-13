@@ -1,0 +1,25 @@
+{
+  "name": "Balaji Digital Seva",
+  "short_name": "Balaji Seva",
+  "description": "Balaji Digital Seva - Deepak Mishra, VLE, Bhatapara",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f8fd",
+  "theme_color": "#0b4bb3",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
