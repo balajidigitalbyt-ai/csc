@@ -15,6 +15,115 @@ const S=[
 {name:'Recharge',hi:'Recharge',icon:'📱',cat:'Payments',services:['Mobile recharge','DTH recharge','Supported recharge'],hiServices:['Mobile recharge','DTH recharge','Supported recharge'],docs:[],hiDocs:[],note:'Verify number and plan before payment.',hiNote:'Payment se pehle number aur plan verify kar lein.'},
 {name:'Print & Scan',hi:'Print & Scan',icon:'🖨️',cat:'Print & Digital',services:['Document printing','Photo printing','Scanning/PDF'],hiServices:['Document printing','Photo printing','Scanning/PDF'],docs:[],hiDocs:[],note:'Send the file/photo you want to print or scan.',hiNote:'Jis file/photo ko print ya scan karwana hai, woh provide karein.'},
 {name:'Online Forms',hi:'Online Forms',icon:'📝',cat:'Online Assistance',services:['Application filling','Document upload','Form submission'],hiServices:['Application filling','Document upload','Form submission'],docs:['Applicant ID proof','Mobile Number','Email ID','Required supporting documents'],hiDocs:['Applicant ID proof','Mobile Number','Email ID','Required supporting documents'],note:'Requirements depend on the particular form/portal.',hiNote:'Requirements particular form/portal ke hisaab se depend karte hain.'}
+,
+{
+  name:'किसान पंजीयन',
+  hi:'किसान पंजीयन',
+  icon:'🌾',
+  cat:'Government Services',
+  services:['किसान पंजीयन सहायता','किसान विवरण अपडेट सहायता','पंजीयन स्थिति की जानकारी'],
+  hiServices:['किसान पंजीयन सहायता','किसान विवरण अपडेट सहायता','पंजीयन की स्थिति की जानकारी'],
+  docs:['आधार कार्ड','मोबाइल नंबर','बैंक पासबुक','भूमि संबंधी दस्तावेज, यदि आवश्यक हों'],
+  hiDocs:['आधार कार्ड','मोबाइल नंबर','बैंक पासबुक','भूमि संबंधी दस्तावेज, यदि आवश्यक हों'],
+  note:'Documents depend on the scheme and portal.',
+  hiNote:'दस्तावेज योजना और संबंधित पोर्टल के अनुसार अलग हो सकते हैं।'
+},
+{
+  name:'जाति प्रमाणपत्र',
+  hi:'जाति प्रमाणपत्र',
+  icon:'📄',
+  cat:'Documents & Certificates',
+  services:['नया आवेदन सहायता','आवेदन में सुधार सहायता','आवेदन स्थिति / डाउनलोड सहायता'],
+  hiServices:['नया आवेदन सहायता','आवेदन में सुधार सहायता','आवेदन की स्थिति / डाउनलोड सहायता'],
+  docs:['आधार या पहचान प्रमाण','पते का प्रमाण','परिवार/जाति संबंधी प्रमाण, जहाँ लागू हो','मोबाइल नंबर'],
+  hiDocs:['आधार या पहचान प्रमाण','पते का प्रमाण','परिवार/जाति संबंधी प्रमाण, जहाँ लागू हो','मोबाइल नंबर'],
+  note:'The competent authority may require additional documents.',
+  hiNote:'संबंधित अधिकारी अतिरिक्त दस्तावेज माँग सकते हैं।'
+},
+{
+  name:'निवास प्रमाणपत्र',
+  hi:'निवास प्रमाणपत्र',
+  icon:'🏠',
+  cat:'Documents & Certificates',
+  services:['नया आवेदन सहायता','आवेदन सुधार सहायता','प्रमाणपत्र डाउनलोड/प्रिंट'],
+  hiServices:['नया आवेदन सहायता','आवेदन सुधार सहायता','प्रमाणपत्र डाउनलोड/प्रिंट'],
+  docs:['आधार या पहचान प्रमाण','पते का प्रमाण','मोबाइल नंबर','अन्य निवास संबंधी दस्तावेज, यदि आवश्यक हों'],
+  hiDocs:['आधार या पहचान प्रमाण','पते का प्रमाण','मोबाइल नंबर','अन्य निवास संबंधी दस्तावेज, यदि आवश्यक हों'],
+  note:'Exact requirements depend on the state portal.',
+  hiNote:'सटीक दस्तावेज राज्य के पोर्टल और आवेदन के अनुसार तय होंगे।'
+},
+{
+  name:'आय प्रमाणपत्र',
+  hi:'आय प्रमाणपत्र',
+  icon:'💵',
+  cat:'Documents & Certificates',
+  services:['नया आवेदन सहायता','आवेदन सुधार सहायता','प्रमाणपत्र डाउनलोड/प्रिंट'],
+  hiServices:['नया आवेदन सहायता','आवेदन सुधार सहायता','प्रमाणपत्र डाउनलोड/प्रिंट'],
+  docs:['आधार या पहचान प्रमाण','पते का प्रमाण','आय संबंधी प्रमाण','मोबाइल नंबर'],
+  hiDocs:['आधार या पहचान प्रमाण','पते का प्रमाण','आय संबंधी प्रमाण','मोबाइल नंबर'],
+  note:'Income proof requirements vary by applicant and purpose.',
+  hiNote:'आय के प्रमाण संबंधी जरूरतें आवेदक और उद्देश्य के अनुसार अलग हो सकती हैं।'
+},
+{
+  name:'छात्रवृत्ति फॉर्म',
+  hi:'छात्रवृत्ति फॉर्म',
+  icon:'🎓',
+  cat:'Education & Scholarship',
+  services:['छात्रवृत्ति आवेदन फॉर्म','नवीनीकरण सहायता','आवेदन स्थिति सहायता'],
+  hiServices:['छात्रवृत्ति आवेदन फॉर्म','नवीनीकरण सहायता','आवेदन की स्थिति में सहायता'],
+  docs:['विद्यार्थी का आधार कार्ड','पिछली कक्षा की अंकसूची','बैंक पासबुक','जाति/आय प्रमाणपत्र, यदि लागू हो','संस्थान और प्रवेश संबंधी विवरण'],
+  hiDocs:['विद्यार्थी का आधार कार्ड','पिछली कक्षा की अंकसूची','बैंक पासबुक','जाति/आय प्रमाणपत्र, यदि लागू हो','संस्थान और प्रवेश संबंधी विवरण'],
+  note:'Documents and eligibility depend on the scholarship scheme.',
+  hiNote:'दस्तावेज और पात्रता संबंधित छात्रवृत्ति योजना पर निर्भर करते हैं।'
+},
+{
+  name:'ड्राइविंग लाइसेंस',
+  hi:'ड्राइविंग लाइसेंस',
+  icon:'🚘',
+  cat:'RTO & Vehicle Services',
+  services:['लर्निंग लाइसेंस आवेदन सहायता','ड्राइविंग लाइसेंस आवेदन सहायता','नवीनीकरण/अपॉइंटमेंट सहायता'],
+  hiServices:['लर्निंग लाइसेंस आवेदन सहायता','ड्राइविंग लाइसेंस आवेदन सहायता','नवीनीकरण/अपॉइंटमेंट सहायता'],
+  docs:['आयु प्रमाण','पते का प्रमाण','आधार या अन्य पहचान प्रमाण','मोबाइल नंबर','मेडिकल प्रमाणपत्र, जहाँ आवश्यक हो'],
+  hiDocs:['आयु प्रमाण','पते का प्रमाण','आधार या अन्य पहचान प्रमाण','मोबाइल नंबर','मेडिकल प्रमाणपत्र, जहाँ आवश्यक हो'],
+  note:'Eligibility and documents depend on the licence category.',
+  hiNote:'पात्रता और दस्तावेज लाइसेंस की श्रेणी के अनुसार बदल सकते हैं।'
+},
+{
+  name:'RTO वाहन सेवाएँ',
+  hi:'RTO वाहन सेवाएँ',
+  icon:'🚗',
+  cat:'RTO & Vehicle Services',
+  services:['RC संबंधी सहायता','वाहन स्वामित्व हस्तांतरण सहायता','वाहन विवरण/आवेदन स्थिति सहायता'],
+  hiServices:['RC संबंधी सहायता','वाहन स्वामित्व हस्तांतरण सहायता','वाहन विवरण/आवेदन स्थिति सहायता'],
+  docs:['वाहन RC','वाहन मालिक का पहचान प्रमाण','बीमा विवरण','PUC, जहाँ लागू हो','अन्य दस्तावेज सेवा के अनुसार'],
+  hiDocs:['वाहन RC','वाहन मालिक का पहचान प्रमाण','बीमा विवरण','PUC, जहाँ लागू हो','अन्य दस्तावेज सेवा के अनुसार'],
+  note:'The required documents depend on the RTO service.',
+  hiNote:'आवश्यक दस्तावेज चुनी गई RTO सेवा पर निर्भर करते हैं।'
+},
+{
+  name:'वाहन बीमा',
+  hi:'वाहन बीमा',
+  icon:'🛡️',
+  cat:'Banking & Financial',
+  services:['नया वाहन बीमा सहायता','बीमा नवीनीकरण','पॉलिसी विवरण / प्रीमियम पूछताछ'],
+  hiServices:['नया वाहन बीमा सहायता','बीमा नवीनीकरण','पॉलिसी विवरण / प्रीमियम पूछताछ'],
+  docs:['वाहन RC','पिछली बीमा पॉलिसी, यदि उपलब्ध हो','मोबाइल नंबर','वाहन संबंधी विवरण'],
+  hiDocs:['वाहन RC','पिछली बीमा पॉलिसी, यदि उपलब्ध हो','मोबाइल नंबर','वाहन संबंधी विवरण'],
+  note:'Premium and coverage depend on the insurer and vehicle details.',
+  hiNote:'प्रीमियम और कवरेज बीमा कंपनी तथा वाहन के विवरण पर निर्भर करते हैं।'
+},
+{
+  name:'हेल्थ इंश्योरेंस',
+  hi:'हेल्थ इंश्योरेंस',
+  icon:'🏥',
+  cat:'Banking & Financial',
+  services:['हेल्थ इंश्योरेंस जानकारी','पॉलिसी विकल्प पूछताछ','नवीनीकरण सहायता'],
+  hiServices:['हेल्थ इंश्योरेंस की जानकारी','पॉलिसी विकल्प पूछताछ','नवीनीकरण सहायता'],
+  docs:['पहचान प्रमाण','मोबाइल नंबर','आयु और व्यक्तिगत विवरण','पुरानी पॉलिसी, यदि उपलब्ध हो'],
+  hiDocs:['पहचान प्रमाण','मोबाइल नंबर','आयु और व्यक्तिगत विवरण','पुरानी पॉलिसी, यदि उपलब्ध हो'],
+  note:'Insurer may request further information or medical details.',
+  hiNote:'बीमा कंपनी अतिरिक्त जानकारी या मेडिकल विवरण माँग सकती है।'
+}
 ];
 
 let langMode=localStorage.getItem('bds-lang')||'en';
@@ -39,7 +148,7 @@ function renderChips(){
 }
 function render(){
   const q=$('search').value.toLowerCase();
-  const a=S.map((x,i)=>[x,i]).filter(([x])=>(active==='All'||x.cat===active)&&(!q||[x.name,x.hi,x.cat,...x.services,...x.docs].join(' ').toLowerCase().includes(q)));
+  const a=S.map((x,i)=>[x,i]).filter(([x])=>(active==='All'||x.cat===active)&&(!q||[x.name,x.hi,x.cat,...x.services,...x.hiServices,...x.docs,...x.hiDocs].join(' ').toLowerCase().includes(q)));
   $('grid').innerHTML=a.map(([x,i])=>`<article onclick="openM(${i})"><div class="ico">${x.icon}</div><h3>${langMode==='hi'?x.hi:x.name}</h3><small>${x.cat}</small><br><small>${t('Tap for details →','Details ke liye tap karein →')}</small></article>`).join('')||`<p class="empty">${t('No matching service found.','Koi matching service nahi mili.')}</p>`;
 }
 renderChips(); render(); $('search').oninput=render;
