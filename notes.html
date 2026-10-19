@@ -1,1 +1,151 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b4bb3">
+  <meta name="description" content="Balaji Digital Seva Competitive Exams Notes Store">
+  <title>Competitive Exams Notes Store | Balaji Digital Seva</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;background:#f4f7fc;color:#17243b;line-height:1.6}
+    a{text-decoration:none}
+    .top{background:#fff;padding:13px 5%;display:flex;justify-content:space-between;align-items:center;gap:10px;box-shadow:0 2px 12px #102b6010}
+    .brand{font-weight:800;color:#123b83}
+    .back{color:#174ea6;font-weight:700}
+    .hero{padding:38px 18px 32px;background:linear-gradient(135deg,#09265b,#1255b5);color:#fff}
+    .hero-inner{max-width:1050px;margin:auto}
+    .eyebrow{font-size:12px;font-weight:800;letter-spacing:1.5px;color:#ffda70}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.2;margin:10px 0}
+    .hero p{color:#e4edff;max-width:650px}
+    .trust{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+    .trust span{border:1px solid #ffffff48;background:#ffffff12;padding:7px 11px;border-radius:30px;font-size:13px}
+    main{max-width:1050px;margin:26px auto;padding:0 16px 35px}
+    .section-title{margin:0 0 5px;font-size:25px}
+    .muted{color:#66748b;margin-top:0}
+    .search{width:100%;padding:13px 15px;border:1px solid #d7dfec;border-radius:12px;font-size:15px;background:#fff;margin:12px 0 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:18px}
+    .card{background:#fff;border:1px solid #e1e8f2;border-radius:18px;overflow:hidden;box-shadow:0 8px 25px #173a7010;display:flex;flex-direction:column}
+    .card-head{padding:22px;background:linear-gradient(135deg,#e8f1ff,#f7faff);min-height:145px}
+    .tag{display:inline-block;background:#dce9ff;color:#164b9a;font-size:11px;font-weight:800;padding:5px 9px;border-radius:20px}
+    .card h3{margin:12px 0 5px;font-size:21px}
+    .card-body{padding:18px;display:flex;flex:1;flex-direction:column}
+    .features{padding-left:20px;margin:5px 0 18px;color:#46556c;font-size:14px}
+    .price-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;padding-top:12px}
+    .price{font-size:28px;font-weight:900;color:#123f8b}
+    .price small{font-size:12px;font-weight:500;color:#6c7890}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;border:0;border-radius:10px;padding:12px 15px;font-weight:800;cursor:pointer}
+    .primary{background:#0b4bb3;color:#fff}
+    .green{background:#168447;color:#fff;width:100%;margin-top:12px}
+    .coming{opacity:.82}
+    .coming .card-head{background:#f0f2f6}
+    .coming .tag{background:#e1e5eb;color:#515c6e}
+    .sample{margin-top:28px;background:#fff;padding:20px;border:1px solid #e1e8f2;border-radius:16px}
+    .sample-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+    .sample-page{background:#f3f6fc;border:1px dashed #b9c8de;border-radius:10px;min-height:125px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px;color:#4a5d7a;font-size:13px}
+    .sample-page b{font-size:23px;color:#174ea6}
+    .payment{margin-top:20px;background:#fff8e4;border:1px solid #f4d786;border-radius:15px;padding:18px}
+    .payment strong{overflow-wrap:anywhere}
+    footer{text-align:center;padding:24px 15px;background:#0b2048;color:#dce6ff;font-size:13px}
+    footer a{color:#fff;text-decoration:underline}
+    @media(max-width:560px){.sample-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:28px}.price{font-size:25px}.top{padding:12px 4%}}
+  </style>
+</head>
+<body>
+  <nav class="top">
+    <a class="brand" href="index.html">BALAJI DIGITAL SEVA</a>
+    <a class="back" href="index.html">← मुख्य वेबसाइट</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">STUDY SMART • PREPARE BETTER</div>
+      <h1>Competitive Exams<br>Notes Store</h1>
+      <p>प्रतियोगी परीक्षाओं के लिए उपयोगी नोट्स चुनें। पहले सैंपल पेज देखें, फिर WhatsApp पर ऑर्डर करें।</p>
+      <div class="trust">
+        <span>📚 विषय के अनुसार नोट्स</span>
+        <span>👀 सैंपल पेज</span>
+        <span>💬 WhatsApp ऑर्डर</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="section-title">अपने नोट्स चुनें</h2>
+    <p class="muted">फिलहाल उपलब्ध नोट्स नीचे दिए गए हैं। नए विषय आगे इसी स्टोर में जोड़े जा सकेंगे।</p>
+
+    <input id="search" class="search" type="search"
+      placeholder="नोट्स या विषय खोजें..."
+      aria-label="नोट्स खोजें">
+
+    <div class="grid" id="notesGrid">
+      <article class="card" data-search="cg vyapam chhattisgarh छत्तीसगढ़ सामान्य ज्ञान gk">
+        <div class="card-head">
+          <span class="tag">उपलब्ध नोट्स</span>
+          <h3>छत्तीसगढ़ सामान्य ज्ञान</h3>
+          <div>CG Vyapam • हस्तलिखित नोट्स</div>
+        </div>
+        <div class="card-body">
+          <ul class="features">
+            <li>छत्तीसगढ़ GK की तैयारी के लिए</li>
+            <li>विषय-सूची और सैंपल पेज देखें</li>
+            <li>PDF WhatsApp पर मैन्युअल रूप से भेजी जाएगी</li>
+          </ul>
+          <div class="price-row">
+            <div class="price">₹100 <small>एक बार</small></div>
+          </div>
+          <a class="btn primary" href="#samples">सैंपल पेज देखें ↓</a>
+          <a class="btn green"
+            href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20CG%20Vyapam%20Chhattisgarh%20GK%20handwritten%20notes%20%28Rs%20100%29%20order%20karne%20hain.%20Kripya%20details%20bhejein."
+            target="_blank" rel="noopener">💬 WhatsApp पर ऑर्डर करें</a>
+        </div>
+      </article>
+
+      <!-- भविष्य में नया विषय जोड़ने के लिए इसी article card को कॉपी करके
+           उसका नाम, विवरण, कीमत और WhatsApp संदेश बदलें। -->
+
+    </div>
+
+    <section class="sample" id="samples">
+      <h2 class="section-title">📖 सैंपल पेज और विषय-सूची</h2>
+      <p class="muted">खरीदने से पहले नोट्स के नमूने और विषय-सूची देखें। असली पेज दिखाने के लिए अपनी 4 सैंपल इमेज नीचे दिए गए नामों से अपलोड करें।</p>
+      <div class="sample-grid">
+        <div class="sample-page"><b>01</b><strong>सैंपल पेज 1</strong><small>sample-1.jpg</small></div>
+        <div class="sample-page"><b>02</b><strong>सैंपल पेज 2</strong><small>sample-2.jpg</small></div>
+        <div class="sample-page"><b>03</b><strong>सैंपल पेज 3</strong><small>sample-3.jpg</small></div>
+        <div class="sample-page"><b>04</b><strong>विषय-सूची / सैंपल</strong><small>sample-4.jpg</small></div>
+      </div>
+    </section>
+
+    <section class="payment">
+      <h2 style="margin-top:0">💳 ऑर्डर और भुगतान कैसे होगा?</h2>
+      <ol>
+        <li>WhatsApp पर नोट्स का ऑर्डर भेजें।</li>
+        <li>भुगतान के लिए UPI ID: <strong>9770890010@ybl</strong></li>
+        <li>भुगतान करने के बाद स्क्रीनशॉट WhatsApp पर भेजें।</li>
+        <li>भुगतान की मैन्युअल जाँच के बाद नोट्स PDF WhatsApp पर भेजी जाएगी।</li>
+      </ol>
+      <p><strong>ध्यान दें:</strong> वेबसाइट पर भुगतान अपने-आप सत्यापित नहीं होता। भुगतान की पुष्टि होने तक PDF डिलीवर नहीं मानी जाएगी।</p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Balaji Digital Seva</strong><br>
+    <a href="index.html">मुख्य वेबसाइट पर वापस जाएँ</a><br>
+    © Balaji Digital Seva
+  </footer>
+
+  <script>
+    const search = document.getElementById('search');
+    const cards = document.querySelectorAll('#notesGrid .card');
+    search.addEventListener('input', function () {
+      const term = this.value.trim().toLowerCase();
+      cards.forEach(card => {
+        card.hidden = !card.dataset.search.toLowerCase().includes(term);
+      });
+    });
+  </script>
+</body>
+</html>
+
