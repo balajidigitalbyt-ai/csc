@@ -1,56 +1,347 @@
-
+```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#102b60">
-  <meta name="description" content="Balaji Digital Seva Notes Store - CG Vyapam और प्रतियोगी परीक्षाओं के नोट्स">
+  <meta name="description" content="Balaji Digital Seva Notes Store - CG Vyapam और प्रतियोगी परीक्षाओं के हस्तलिखित नोट्स">
   <title>Notes Store | Balaji Digital Seva</title>
 
   <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;background:#f4f7fc;color:#17243b;line-height:1.65}
-    a{text-decoration:none}
-    .topbar{background:#fff;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 3px 15px #102b6010}
-    .brand{font-weight:900;color:#123b83;font-size:16px}
-    .back{font-weight:700;color:#174ea6;font-size:14px}
-    .hero{background:linear-gradient(135deg,#09265b,#1457b8);color:white;padding:40px 18px}
-    .hero-inner{max-width:1080px;margin:auto}
-    .eyebrow{color:#ffda70;font-weight:800;font-size:12px;letter-spacing:1.5px}
-    h1{font-size:clamp(30px,5vw,46px);line-height:1.2;margin:12px 0}
-    .hero p{max-width:660px;color:#e2ebff}
-    .pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
-    .pills span{background:#ffffff15;border:1px solid #ffffff40;border-radius:30px;padding:7px 12px;font-size:13px}
-    main{max-width:1080px;margin:28px auto;padding:0 16px 40px}
-    .heading{font-size:26px;margin:0 0 5px}
-    .muted{color:#68768d;margin-top:0}
-    .search{width:100%;padding:14px;border:1px solid #d9e2ef;border-radius:12px;font-size:16px;background:white;margin:12px 0 22px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,275px),1fr));gap:20px}
-    .card{background:white;border:1px solid #e0e8f3;border-radius:18px;overflow:hidden;box-shadow:0 8px 26px #193e7210;display:flex;flex-direction:column}
-    .card-head{padding:22px;background:linear-gradient(135deg,#e4efff,#f7faff);min-height:150px}
-    .tag{display:inline-block;background:#dce9ff;color:#164b9a;font-size:12px;font-weight:800;padding:5px 10px;border-radius:20px}
-    .card h3{margin:12px 0 4px;font-size:22px}
-    .card-body{padding:20px;display:flex;flex:1;flex-direction:column}
-    .features{padding-left:20px;color:#48566c;font-size:14px;margin:0 0 16px}
-    .price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding:12px 0}
-    .price{font-size:30px;font-weight:900;color:#123f8b}
-    .price small{font-size:12px;color:#68768d;font-weight:500}
-    .btn{display:flex;justify-content:center;align-items:center;text-align:center;border:0;border-radius:11px;padding:12px 14px;font-weight:800;cursor:pointer}
-    .blue{background:#0b4bb3;color:white}
-    .green{background:#168447;color:white;margin-top:10px}
-    .section{margin-top:30px;background:white;border:1px solid #e0e8f3;border-radius:18px;padding:20px}
-    .samples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
-    .sample-link{display:block;background:#f1f5fb;border:1px solid #e1e7f0;border-radius:12px;overflow:hidden}
-    .sample-link img{display:block;width:100%;height:auto;min-height:100px;object-fit:contain;background:#eef2f8}
-    .sample-label{display:block;padding:9px;font-size:13px;font-weight:700;color:#34445f;text-align:center}
-    .payment{background:#fff8e4;border-color:#f0d585}
-    .payment ol{padding-left:22px}
-    .upi{background:#fff;border:1px dashed #dfbd57;border-radius:10px;padding:12px;overflow-wrap:anywhere}
-    .copybtn{border:0;background:#173e82;color:#fff;border-radius:8px;padding:8px 12px;margin-top:8px;font-weight:bold;cursor:pointer}
-    footer{background:#0b2048;color:#dce6ff;text-align:center;padding:25px 15px;font-size:13px}
-    footer a{color:#fff;text-decoration:underline}
-    @media(min-width:700px){.samples{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: #f4f7fc;
+      color: #17243b;
+      line-height: 1.65;
+    }
+
+    a { text-decoration: none; }
+
+    .topbar {
+      background: #fff;
+      padding: 14px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 3px 15px #102b6010;
+    }
+
+    .brand {
+      font-weight: 900;
+      color: #123b83;
+      font-size: 16px;
+    }
+
+    .back {
+      font-weight: 700;
+      color: #174ea6;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #09265b, #1457b8);
+      color: white;
+      padding: 40px 18px;
+    }
+
+    .hero-inner {
+      max-width: 1080px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #ffda70;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      margin: 12px 0;
+    }
+
+    .hero p {
+      max-width: 660px;
+      color: #e2ebff;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .pills span {
+      background: #ffffff15;
+      border: 1px solid #ffffff40;
+      border-radius: 30px;
+      padding: 7px 12px;
+      font-size: 13px;
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 28px auto;
+      padding: 0 16px 40px;
+    }
+
+    .heading {
+      font-size: 26px;
+      margin: 0 0 5px;
+    }
+
+    .muted {
+      color: #68768d;
+      margin-top: 0;
+    }
+
+    .search {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d9e2ef;
+      border-radius: 12px;
+      font-size: 16px;
+      background: white;
+      margin: 12px 0 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 275px), 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e0e8f3;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 26px #193e7210;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-head {
+      padding: 22px;
+      background: linear-gradient(135deg, #e4efff, #f7faff);
+      min-height: 150px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #dce9ff;
+      color: #164b9a;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+
+    .card h3 {
+      margin: 12px 0 4px;
+      font-size: 22px;
+    }
+
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .features {
+      padding-left: 20px;
+      color: #48566c;
+      font-size: 14px;
+      margin: 0 0 16px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: auto;
+      padding: 12px 0;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: 900;
+      color: #123f8b;
+    }
+
+    .price small {
+      font-size: 12px;
+      color: #68768d;
+      font-weight: 500;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 0;
+      border-radius: 11px;
+      padding: 12px 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s, filter .2s;
+    }
+
+    .btn:hover {
+      filter: brightness(.96);
+      transform: translateY(-1px);
+    }
+
+    .blue {
+      background: #0b4bb3;
+      color: white;
+    }
+
+    .green {
+      background: #168447;
+      color: white;
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-top: 30px;
+      background: white;
+      border: 1px solid #e0e8f3;
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .samples {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .sample-link {
+      display: block;
+      background: #f1f5fb;
+      border: 1px solid #e1e7f0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .sample-link img {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 100px;
+      object-fit: contain;
+      background: #eef2f8;
+    }
+
+    .sample-label {
+      display: block;
+      padding: 9px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #34445f;
+      text-align: center;
+    }
+
+    .topic-box {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #e9f1ff, #ffffff);
+      border: 1px solid #d7e5fb;
+    }
+
+    .topic-box p {
+      color: #53627a;
+    }
+
+    .topic-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #123f8b;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 11px;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+
+    .order-info {
+      background: #fff;
+      border: 1px solid #e0e8f3;
+      border-radius: 18px;
+      padding: 22px;
+      margin-top: 30px;
+    }
+
+    .order-info ul {
+      padding-left: 22px;
+      color: #48566c;
+    }
+
+    .order-info .btn {
+      margin-top: 16px;
+    }
+
+    footer {
+      background: #0b2048;
+      color: #dce6ff;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (min-width: 700px) {
+      .samples {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .topbar {
+        padding: 13px 4%;
+      }
+
+      .brand {
+        font-size: 14px;
+      }
+
+      .back {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 32px 17px;
+      }
+
+      .section,
+      .order-info,
+      .topic-box {
+        padding: 17px;
+      }
+    }
   </style>
 </head>
 
@@ -63,11 +354,18 @@
   <header class="hero">
     <div class="hero-inner">
       <div class="eyebrow">STUDY SMART • PREPARE BETTER</div>
+
       <h1>Competitive Exams<br>Notes Store</h1>
-      <p>प्रतियोगी परीक्षाओं की तैयारी के लिए नोट्स चुनें। सैंपल पेज और विषय-सूची देखकर WhatsApp पर ऑर्डर करें।</p>
+
+      <p>
+        प्रतियोगी परीक्षाओं की तैयारी के लिए नोट्स चुनें।
+        सैंपल पेज और विषय-सूची देखकर WhatsApp पर ऑर्डर करें।
+      </p>
+
       <div class="pills">
         <span>📚 विषय के अनुसार नोट्स</span>
         <span>👀 सैंपल पेज देखें</span>
+        <span>📑 विषय-सूची</span>
         <span>💬 WhatsApp ऑर्डर</span>
       </div>
     </div>
@@ -75,96 +373,175 @@
 
   <main>
     <h2 class="heading">अपनी परीक्षा के नोट्स चुनें</h2>
-    <p class="muted">फिलहाल उपलब्ध नोट्स नीचे हैं। भविष्य में दूसरे विषय और परीक्षाएँ भी इसी स्टोर में जोड़ी जा सकती हैं।</p>
 
-    <input id="search" class="search" type="search"
+    <p class="muted">
+      फिलहाल CG Vyapam के नोट्स उपलब्ध हैं।
+      भविष्य में दूसरे विषय और परीक्षाएँ भी इसी स्टोर में जोड़ी जा सकती हैं।
+    </p>
+
+    <input
+      id="search"
+      class="search"
+      type="search"
       placeholder="नोट्स या विषय खोजें..."
-      aria-label="नोट्स खोजें">
+      aria-label="नोट्स खोजें"
+    >
 
     <div class="grid" id="notesGrid">
 
-      <!-- CG VYAPAM NOTES -->
-      <article class="card" data-search="cg vyapam chhattisgarh छत्तीसगढ़ सामान्य ज्ञान gk">
+      <article
+        class="card"
+        data-search="cg vyapam chhattisgarh छत्तीसगढ़ सामान्य ज्ञान gk हस्तलिखित नोट्स"
+      >
         <div class="card-head">
           <span class="tag">अभी उपलब्ध</span>
           <h3>छत्तीसगढ़ सामान्य ज्ञान</h3>
           <div>CG Vyapam • हस्तलिखित नोट्स</div>
         </div>
+
         <div class="card-body">
           <ul class="features">
             <li>छत्तीसगढ़ सामान्य ज्ञान के नोट्स</li>
-            <li>सैंपल पेज और विषय-सूची देखें</li>
-            <li>भुगतान की पुष्टि के बाद PDF WhatsApp पर</li>
+            <li>नोट्स के असली सैंपल पेज देखें</li>
+            <li>अलग पेज पर विषय-सूची देखें</li>
+            <li>ऑर्डर के लिए WhatsApp संपर्क</li>
           </ul>
+
           <div class="price-row">
             <div class="price">₹100 <small>एक बार</small></div>
           </div>
-          <a class="btn blue" href="#samples">📖 सैंपल पेज देखें</a>
-          <a class="btn blue" href="topics.html">📑 पूरी विषय-सूची देखें</a>
-          <a class="btn green"
-   href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20CG%20Vyapam%20Chhattisgarh%20GK%20handwritten%20notes%20Rs%20100%20order%20karne%20hain."
-   target="_blank" rel="noopener">
-  🛒 Place Order — ₹100
-</a>
+
+          <a class="btn blue" href="#samples">
+            📖 सैंपल पेज देखें
+          </a>
+
+          <a class="btn blue" href="topics.html" style="margin-top:10px">
+            📑 पूरी विषय-सूची देखें
+          </a>
+
+          <a
+            class="btn green"
+            href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20CG%20Vyapam%20Chhattisgarh%20GK%20handwritten%20notes%20Rs%20100%20order%20karne%20hain."
+            target="_blank"
+            rel="noopener"
+          >
+            🛒 Place Order — ₹100
+          </a>
         </div>
       </article>
 
       <!--
-        भविष्य में नया विषय जोड़ने के लिए:
-        ऊपर वाले article कार्ड को कॉपी करें।
+        भविष्य में नए नोट्स जोड़ने के लिए:
+        इस article कार्ड को कॉपी करें।
         उसका नाम, data-search, विवरण, कीमत और WhatsApp संदेश बदलें।
-        उपलब्ध न होने वाले विषयों को अभी उपलब्ध बताकर न दिखाएँ।
+        केवल वही नोट्स उपलब्ध दिखाएँ जो वास्तव में तैयार हों।
       -->
 
     </div>
 
-    <!-- SAMPLE PHOTOS -->
     <section class="section" id="samples">
       <h2 class="heading">📖 नोट्स के सैंपल पेज</h2>
-      <p class="muted">खरीदने से पहले नोट्स के असली नमूने देखें। किसी तस्वीर पर क्लिक करके उसे बड़ा खोल सकते हैं।</p>
+
+      <p class="muted">
+        खरीदने से पहले नोट्स के असली नमूने देखें।
+        किसी तस्वीर पर क्लिक करके उसे बड़े आकार में खोल सकते हैं।
+      </p>
 
       <div class="samples">
-        <a class="sample-link" href="assets/notes/sample 1.jpg" target="_blank" rel="noopener">
-          <img src="assets/notes/sample 1.jpg" alt="CG Vyapam नोट्स सैंपल पेज 1" loading="lazy">
+        <a
+          class="sample-link"
+          href="assets/notes/sample 1.jpg"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="assets/notes/sample 1.jpg"
+            alt="CG Vyapam नोट्स सैंपल पेज 1"
+            loading="lazy"
+          >
           <span class="sample-label">सैंपल पेज 1</span>
         </a>
 
-        <a class="sample-link" href="assets/notes/sample 2.jpg" target="_blank" rel="noopener">
-          <img src="assets/notes/sample 2.jpg" alt="CG Vyapam नोट्स सैंपल पेज 2" loading="lazy">
+        <a
+          class="sample-link"
+          href="assets/notes/sample 2.jpg"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="assets/notes/sample 2.jpg"
+            alt="CG Vyapam नोट्स सैंपल पेज 2"
+            loading="lazy"
+          >
           <span class="sample-label">सैंपल पेज 2</span>
         </a>
 
-        <a class="sample-link" href="assets/notes/sample 3.jpg" target="_blank" rel="noopener">
-          <img src="assets/notes/sample 3.jpg" alt="CG Vyapam नोट्स सैंपल पेज 3" loading="lazy">
+        <a
+          class="sample-link"
+          href="assets/notes/sample 3.jpg"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="assets/notes/sample 3.jpg"
+            alt="CG Vyapam नोट्स सैंपल पेज 3"
+            loading="lazy"
+          >
           <span class="sample-label">सैंपल पेज 3</span>
         </a>
 
-        <a class="sample-link" href="assets/notes/sample 4.jpg" target="_blank" rel="noopener">
-          <img src="assets/notes/sample 4.jpg" alt="CG Vyapam नोट्स की विषय-सूची या सैंपल पेज 4" loading="lazy">
-          <span class="sample-label">विषय-सूची / सैंपल 4</span>
+        <a
+          class="sample-link"
+          href="assets/notes/sample 4.jpg"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="assets/notes/sample 4.jpg"
+            alt="CG Vyapam नोट्स सैंपल पेज 4"
+            loading="lazy"
+          >
+          <span class="sample-label">सैंपल पेज 4</span>
         </a>
       </div>
     </section>
 
-    <section class="section">
-  <h2 class="heading">🛒 ऑर्डर कैसे करें?</h2>
-  <p>नोट्स की विषय-सूची और सैंपल पेज देखने के बाद नीचे दिए बटन से ऑर्डर करें।</p>
-  <a class="btn green"
-     href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20CG%20Vyapam%20GK%20notes%20Rs%20100%20order%20karne%20hain."
-     target="_blank" rel="noopener">
-    💬 WhatsApp पर ऑर्डर करें
-  </a>
-  <p class="muted">भुगतान की प्रक्रिया ऑर्डर के अगले चरण में बताई जाएगी।</p>
-</section>
+    <section class="topic-box">
+      <h2 class="heading">📑 नोट्स में कौन-कौन से टॉपिक हैं?</h2>
 
-      <div class="upi">
-        <strong>UPI ID:</strong>
-        <span id="upiId">9770890010@ybl</span><br>
-        <button class="copybtn" type="button" id="copyUpi">UPI ID कॉपी करें</button>
-        <p id="copyStatus" aria-live="polite"></p>
-      </div>
+      <p>
+        नोट्स खरीदने से पहले पूरी विषय-सूची अलग पेज पर देखें।
+        इससे आपको नोट्स में शामिल अध्यायों की जानकारी मिल सकेगी।
+      </p>
 
-      <p><strong>महत्वपूर्ण:</strong> वेबसाइट भुगतान अपने-आप सत्यापित नहीं करती। भुगतान की पुष्टि मालिक द्वारा मैन्युअल रूप से की जाएगी।</p>
+      <a class="topic-btn" href="topics.html">
+        पूरी विषय-सूची देखें →
+      </a>
+    </section>
+
+    <section class="order-info">
+      <h2 class="heading">🛒 ऑर्डर कैसे करें?</h2>
+
+      <ul>
+        <li>नोट्स के सैंपल पेज और विषय-सूची देख लें।</li>
+        <li>₹100 वाले Place Order बटन पर क्लिक करें।</li>
+        <li>WhatsApp पर खुलने वाले संदेश को भेजकर ऑर्डर की प्रक्रिया शुरू करें।</li>
+        <li>आगे की भुगतान प्रक्रिया WhatsApp पर बताई जाएगी।</li>
+      </ul>
+
+      <a
+        class="btn green"
+        href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20CG%20Vyapam%20GK%20notes%20Rs%20100%20order%20karne%20hain."
+        target="_blank"
+        rel="noopener"
+      >
+        💬 WhatsApp पर ऑर्डर शुरू करें
+      </a>
+
+      <p class="muted">
+        नोट: फिलहाल यह बटन WhatsApp पर संदेश खोलता है।
+        ऑटोमेटेड ऑर्डर और पेमेंट प्रक्रिया बाद में अलग से सेटअप की जाएगी।
+      </p>
     </section>
   </main>
 
@@ -181,23 +558,13 @@
 
     searchInput.addEventListener('input', function () {
       const term = this.value.trim().toLowerCase();
+
       noteCards.forEach(function (card) {
         const text = (card.dataset.search || '').toLowerCase();
         card.hidden = !text.includes(term);
       });
     });
-
-    document.getElementById('copyUpi').addEventListener('click', async function () {
-      const upi = document.getElementById('upiId').textContent.trim();
-      const status = document.getElementById('copyStatus');
-
-      try {
-        await navigator.clipboard.writeText(upi);
-        status.textContent = 'UPI ID कॉपी हो गई।';
-      } catch (error) {
-        status.textContent = 'UPI ID को चुनकर Ctrl+C से कॉपी करें: ' + upi;
-      }
-    });
   </script>
 </body>
 </html>
+```
