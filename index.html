@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,8 +20,8 @@
 .wcc-button:hover{filter:brightness(.96)}.wcc-content small{display:block;margin-top:9px;opacity:.72}
 @media (max-width:600px){.whatsapp-channel-cta{margin:16px 12px;padding:18px;align-items:flex-start}.wcc-icon{width:50px;height:50px;min-width:50px;font-size:24px}.wcc-content h2{font-size:18px}.wcc-button{width:100%;box-sizing:border-box}}
 </style>
-
 </head>
+
 <body>
 <div class="top">
   <div class="brand-mini"><span class="live-dot"></span><b data-en="Digital Service Center" data-hi="Digital Service Center">Digital Service Center</b></div>
@@ -59,7 +60,6 @@
   <div class="hnb-controls"><button type="button" class="hnb-prev" aria-label="Previous update">‹</button><div class="hnb-dots" id="hnb-dots"></div><button type="button" class="hnb-next" aria-label="Next update">›</button></div>
 </section>
 
-
 <section class="whatsapp-channel-cta" aria-label="Join WhatsApp Channel">
   <div class="wcc-icon">📲</div>
   <div class="wcc-content">
@@ -84,139 +84,82 @@
   </div>
 </div>
 
-
-
 <main>
-  
 
+<!-- STUDY NOTES STORE: BOTH PRODUCTS -->
 <style>
-.notes-home {
-  max-width: 1000px;
-  margin: 28px auto;
-  padding: 0 18px;
-}
-.notes-home-card {
-  overflow: hidden;
-  border-radius: 22px;
-  background: var(--card, #ffffff);
-  border: 1px solid rgba(11,75,179,.15);
-  box-shadow: 0 10px 30px rgba(11,75,179,.10);
-}
-.notes-home-head {
-  padding: 25px;
-  color: #fff;
-  background: linear-gradient(125deg,#083b91,#1674e8);
-}
-.notes-home-label {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  opacity: .85;
-}
-.notes-home-head h2 {
-  margin: 10px 0;
-  font-size: clamp(23px,4vw,32px);
-  line-height: 1.3;
-}
-.notes-home-head p {
-  margin: 0;
-  line-height: 1.7;
-  opacity: .92;
-}
-.notes-home-body {
-  padding: 22px 25px 25px;
-}
-.notes-home-product {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-.notes-home-product h3 {
-  margin: 0 0 8px;
-  font-size: 21px;
-}
-.notes-home-product p {
-  margin: 0;
-  line-height: 1.7;
-  opacity: .8;
-}
-.notes-home-price {
-  font-size: 27px;
-  font-weight: 800;
-  color: #0b4bb3;
-  white-space: nowrap;
-}
-.notes-home-features {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 18px 0;
-}
-.notes-home-features span {
-  padding: 8px 12px;
-  border-radius: 30px;
-  background: #edf5ff;
-  color: #164b91;
-  font-size: 13px;
-  font-weight: 700;
-}
-.notes-home-button {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 14px 18px;
-  border-radius: 12px;
-  background: #0b4bb3;
-  color: #fff !important;
-  text-align: center;
-  text-decoration: none !important;
-  font-weight: 800;
-  transition: background .2s,transform .2s;
-}
-.notes-home-button:hover {
-  background: #083b91;
-  transform: translateY(-1px);
-}
-@media(max-width:600px) {
-  .notes-home { margin: 20px auto; padding: 0 12px; }
-  .notes-home-head { padding: 21px; }
-  .notes-home-body { padding: 20px; }
-  .notes-home-product { align-items: flex-start; }
-  .notes-home-price { font-size: 24px; }
-}
+.notes-home{max-width:1000px;margin:28px auto;padding:0 18px}
+.notes-home-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.notes-home-card{overflow:hidden;border-radius:22px;background:var(--card,#fff);border:1px solid rgba(11,75,179,.15);box-shadow:0 10px 30px rgba(11,75,179,.10)}
+.notes-home-head{padding:23px;color:#fff;background:linear-gradient(125deg,#083b91,#1674e8)}
+.notes-home-head.constitution{background:linear-gradient(125deg,#7138a8,#a855c7)}
+.notes-home-label{display:inline-block;font-size:12px;font-weight:800;letter-spacing:1px;opacity:.9}
+.notes-home-head h2{margin:10px 0;font-size:clamp(21px,3vw,28px);line-height:1.35}
+.notes-home-head p{margin:0;line-height:1.7;opacity:.95}
+.notes-home-body{padding:22px}
+.notes-home-product{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.notes-home-product h3{margin:0 0 8px;font-size:20px}
+.notes-home-product p{margin:0;line-height:1.7;opacity:.8}
+.notes-home-price{font-size:25px;font-weight:800;color:#0b4bb3;white-space:nowrap}
+.notes-home-price del{display:block;font-size:14px;font-weight:500;color:#777;text-align:right}
+.notes-home-features{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.notes-home-features span{padding:8px 10px;border-radius:30px;background:#edf5ff;color:#164b91;font-size:12px;font-weight:700}
+.notes-home-button{display:block;width:100%;box-sizing:border-box;padding:14px 12px;border-radius:12px;background:#0b4bb3;color:#fff!important;text-align:center;text-decoration:none!important;font-weight:800;transition:filter .2s}
+.notes-home-button.purple{background:#7939a9}
+.notes-home-button:hover{filter:brightness(.93)}
+@media(max-width:700px){.notes-home-grid{grid-template-columns:1fr}.notes-home{margin:20px auto;padding:0 12px}.notes-home-head{padding:21px}.notes-home-body{padding:20px}}
 </style>
 
 <section class="notes-home" aria-label="Study Notes Store">
-  <div class="notes-home-card">
-    <div class="notes-home-head">
-      <span class="notes-home-label">📚 STUDY NOTES STORE</span>
-      <h2>CG Vyapam हस्तलिखित नोट्स</h2>
-      <p>छत्तीसगढ़ GK की तैयारी के लिए उपयोगी नोट्स।</p>
-    </div>
-    <div class="notes-home-body">
-      <div class="notes-home-product">
-        <div>
-          <h3>CG Vyapam GK Notes</h3>
-          <p>हस्तलिखित नोट्स • PDF फॉर्मेट</p>
-        </div>
-        <div class="notes-home-price">₹100</div>
-      </div>
-      <div class="notes-home-features">
-        <span>✓ सैंपल पेज</span>
-        <span>✓ विषय-सूची</span>
-        <span>✓ WhatsApp ऑर्डर</span>
-      </div>
-      <a class="notes-home-button" href="notes.html">
-        नोट्स देखें और ऑर्डर करें →
-      </a>
-    </div>
-  </div>
-</section>
+  <div class="notes-home-grid">
 
-  </a>
+    <article class="notes-home-card">
+      <div class="notes-home-head">
+        <span class="notes-home-label">📚 STUDY NOTES • CG VYAPAM</span>
+        <h2>CG Vyapam हस्तलिखित नोट्स</h2>
+        <p>छत्तीसगढ़ सामान्य ज्ञान की तैयारी के लिए उपयोगी नोट्स।</p>
+      </div>
+      <div class="notes-home-body">
+        <div class="notes-home-product">
+          <div>
+            <h3>CG Vyapam GK Notes</h3>
+            <p>हस्तलिखित नोट्स • PDF फॉर्मेट</p>
+          </div>
+          <div class="notes-home-price">₹100</div>
+        </div>
+        <div class="notes-home-features">
+          <span>✓ सैंपल पेज</span>
+          <span>✓ विषय-सूची</span>
+          <span>✓ WhatsApp ऑर्डर</span>
+        </div>
+        <a class="notes-home-button" href="notes.html">CG नोट्स देखें और ऑर्डर करें →</a>
+      </div>
+    </article>
+
+    <article class="notes-home-card">
+      <div class="notes-home-head constitution">
+        <span class="notes-home-label">📘 INDIAN POLITY NOTES</span>
+        <h2>भारतीय संविधान एवं राजव्यवस्था</h2>
+        <p>प्रतियोगी परीक्षाओं की तैयारी के लिए विषयवार अध्ययन सामग्री।</p>
+      </div>
+      <div class="notes-home-body">
+        <div class="notes-home-product">
+          <div>
+            <h3>Constitution &amp; Polity Notes</h3>
+            <p>PDF फॉर्मेट</p>
+          </div>
+          <div class="notes-home-price">₹190<del>₹250</del></div>
+        </div>
+        <div class="notes-home-features">
+          <span>✓ सैंपल पेज</span>
+          <span>✓ 24 विषय</span>
+          <span>✓ ₹60 की बचत</span>
+        </div>
+        <a class="notes-home-button purple" href="constitution.html">संविधान नोट्स देखें और ऑर्डर करें →</a>
+      </div>
+    </article>
+
+  </div>
 </section>
 
 <section id="services">
@@ -272,7 +215,7 @@
     <p data-en="Reach Balaji Digital Seva directly." data-hi="Balaji Digital Seva se directly contact karein.">Reach Balaji Digital Seva directly.</p>
     <a class="btn white" href="tel:+917999276798">☎ <span data-en="Call Now" data-hi="Call Karein">Call Now</span></a>
     <a class="btn white" id="wa2">◉ WhatsApp</a>
-    <a class="btn white" href="https://www.google.com/maps/search/?api=1&query=Water+Filter+Complex%2C+Naka+No.+1%2C+Bhatapara%2C+Chhattisgarh" target="_blank" rel="noopener">📍 <span data-en="Directions" data-hi="Directions">Directions</span></a>
+    <a class="btn white" href="https://www.google.com/maps/search/?api=1&amp;query=Water+Filter+Complex%2C+Naka+No.+1%2C+Bhatapara%2C+Chhattisgarh" target="_blank" rel="noopener">📍 <span data-en="Directions" data-hi="Directions">Directions</span></a>
   </div>
   <div class="details">
     <b>PHONE<br><span>7999276798</span></b>
@@ -282,7 +225,6 @@
   </div>
 </section>
 </main>
-
 
 <section class="install-section" id="installApp">
   <div class="install-icon">📲</div>
@@ -294,13 +236,13 @@
   <button class="btn install-btn" id="installBtn">＋ Add to Home Screen</button>
 </section>
 
-
 <div class="map-address-row">
   <span>📍 Water Filter Complex, Naka No. 1, Bhatapara</span>
   <a href="https://maps.app.goo.gl/2zhiAr86G5BY8EHH6" target="_blank" rel="noopener">Get Directions</a>
 </div>
 
 <footer><b>Balaji Digital Seva</b><span>Deepak Mishra • VLE</span><span>© <span id="year"></span></span></footer>
+
 <nav aria-label="Bottom navigation">
   <a href="#">⌂<small data-en="Home" data-hi="Home">Home</small></a>
   <a href="#services">▦<small data-en="Services" data-hi="Services">Services</small></a>
@@ -327,28 +269,35 @@
     </div>
   </div>
 </div>
+
 <div id="toast" class="toast"></div>
 <script src="script.js"></script>
-
-
 
 <script>
 (function(){
 const API_URL="https://script.google.com/macros/s/AKfycbz4wLTa_00YmEcPIq7Bjo2JvtrB1iy1CBfEbDE63kWhWK-3Ne3dLarzAZk2OY-b8mY/exec",board=document.getElementById("hero-notice-board"),modal=document.getElementById("hnb-modal"),slider=document.getElementById("hnb-slider"),dots=document.getElementById("hnb-dots");
-if(!board||!modal||!slider||!dots)return;let notices=[],current=0,timer;
+if(!board||!modal||!slider||!dots)return;
+let notices=[],current=0,timer;
 const types={service:["🆕","NEW SERVICE","service"],job:["💼","JOB ALERT","job"],notice:["📢","IMPORTANT NOTICE","notice"]};
 const esc=v=>String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
 function show(n){if(!notices.length)return;current=(n+notices.length)%notices.length;[...slider.children].forEach((x,i)=>x.classList.toggle("active",i===current));[...dots.children].forEach((x,i)=>x.classList.toggle("active",i===current))}
 function restart(){clearInterval(timer);if(notices.length>1)timer=setInterval(()=>show(current+1),5000)}
 function modalOpen(i){const n=notices[i];if(!n)return;const x=types[String(n.type||"notice").toLowerCase()]||types.notice;document.getElementById("hnb-modal-tag").textContent=x[1];document.getElementById("hnb-modal-title").textContent=n.title||"";document.getElementById("hnb-modal-text").textContent=n.shortDescription||"";document.getElementById("hnb-modal-body").textContent=n.fullDetails||n.shortDescription||"";modal.classList.add("open");modal.setAttribute("aria-hidden","false")}
 function bind(){[...slider.children].forEach(x=>{x.onclick=()=>modalOpen(+x.dataset.index);x.tabIndex=0;x.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();modalOpen(+x.dataset.index)}}})}
-function render(){if(!notices.length){slider.innerHTML='<article class="hnb-item active"><div class="hnb-icon">📢</div><div class="hnb-content"><span class="hnb-tag notice">NOTICE</span><h3>No Active Updates</h3><p>Abhi koi naya active notice available nahi hai.</p><small>Latest Update</small></div></article>';dots.innerHTML="";return}slider.innerHTML=notices.map((n,i)=>{const x=types[String(n.type||"notice").toLowerCase()]||types.notice;return `<article class="hnb-item${i?"":" active"}" data-index="${i}"><div class="hnb-icon">${x[0]}</div><div class="hnb-content"><span class="hnb-tag ${x[2]}">${x[1]}</span><h3>${esc(n.title)}</h3><p>${esc(n.shortDescription)}</p><small>${esc(n.date||"Latest Update")}</small><button type="button" class="hnb-details">View Details →</button></div></article>`}).join("");dots.innerHTML=notices.map((_,i)=>`<button type="button" class="${i?"":"active"}" aria-label="Update ${i+1}"></button>`).join("");bind();show(0);restart()}
-board.querySelector(".hnb-next").onclick=()=>{show(current+1);restart()};board.querySelector(".hnb-prev").onclick=()=>{show(current-1);restart()};dots.onclick=e=>{const i=[...dots.children].indexOf(e.target);if(i>=0){show(i);restart()}};
-modal.querySelector(".hnb-modal-close").onclick=()=>{modal.classList.remove("open");modal.setAttribute("aria-hidden","true")};modal.onclick=e=>{if(e.target===modal)modal.querySelector(".hnb-modal-close").click()};
+function render(){
+ if(!notices.length){slider.innerHTML='<article class="hnb-item active"><div class="hnb-icon">📢</div><div class="hnb-content"><span class="hnb-tag notice">NOTICE</span><h3>No Active Updates</h3><p>Abhi koi naya active notice available nahi hai.</p><small>Latest Update</small></div></article>';dots.innerHTML="";return}
+ slider.innerHTML=notices.map((n,i)=>{const x=types[String(n.type||"notice").toLowerCase()]||types.notice;return `<article class="hnb-item${i?"":" active"}" data-index="${i}"><div class="hnb-icon">${x[0]}</div><div class="hnb-content"><span class="hnb-tag ${x[2]}">${x[1]}</span><h3>${esc(n.title)}</h3><p>${esc(n.shortDescription)}</p><small>${esc(n.date||"Latest Update")}</small><button type="button" class="hnb-details">View Details →</button></div></article>`}).join("");
+ dots.innerHTML=notices.map((_,i)=>`<button type="button" class="${i?"":"active"}" aria-label="Update ${i+1}"></button>`).join("");
+ bind();show(0);restart()
+}
+board.querySelector(".hnb-next").onclick=()=>{show(current+1);restart()};
+board.querySelector(".hnb-prev").onclick=()=>{show(current-1);restart()};
+dots.onclick=e=>{const i=[...dots.children].indexOf(e.target);if(i>=0){show(i);restart()}};
+modal.querySelector(".hnb-modal-close").onclick=()=>{modal.classList.remove("open");modal.setAttribute("aria-hidden","true")};
+modal.onclick=e=>{if(e.target===modal)modal.querySelector(".hnb-modal-close").click()};
 fetch(API_URL,{cache:"no-store"}).then(r=>r.json()).then(d=>{notices=Array.isArray(d)?d:[];render()}).catch(()=>{notices=[];render()});
 })();
 </script>
-
 
 <!-- Floating WhatsApp + Call Buttons -->
 <div class="floating-contact-buttons" aria-label="Quick Contact">
