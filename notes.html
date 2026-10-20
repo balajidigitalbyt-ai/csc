@@ -1,570 +1,814 @@
-```html
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#102b60">
-  <meta name="description" content="Balaji Digital Seva Notes Store - CG Vyapam और प्रतियोगी परीक्षाओं के हस्तलिखित नोट्स">
-  <title>Notes Store | Balaji Digital Seva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Competitive Exams Notes Store | Balaji Digital Seva</title>
+
+  <meta name="description" content="Balaji Digital Seva - CG Vyapam एवं प्रतियोगी परीक्षाओं के लिए विस्तृत, अध्यायवार अध्ययन सामग्री। सैंपल पेज और विषय-सूची देखें।">
+
+  <meta name="theme-color" content="#102b52">
 
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      --primary: #12396b;
+      --primary-dark: #0b2445;
+      --accent: #f5a623;
+      --green: #14804a;
+      --background: #f4f7fb;
+      --text: #172b4d;
+      --muted: #64748b;
+      --white: #ffffff;
+      --border: #e1e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      margin: 0;
       font-family: Arial, "Noto Sans Devanagari", sans-serif;
-      background: #f4f7fc;
-      color: #17243b;
-      line-height: 1.65;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
     }
 
-    a { text-decoration: none; }
-
-    .topbar {
-      background: #fff;
-      padding: 14px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 3px 15px #102b6010;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .brand {
-      font-weight: 900;
-      color: #123b83;
-      font-size: 16px;
+    button,
+    input {
+      font: inherit;
     }
 
-    .back {
-      font-weight: 700;
-      color: #174ea6;
-      font-size: 14px;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #09265b, #1457b8);
-      color: white;
-      padding: 40px 18px;
-    }
-
-    .hero-inner {
-      max-width: 1080px;
+    .container {
+      width: min(1120px, 92%);
       margin: auto;
     }
 
-    .eyebrow {
-      color: #ffda70;
-      font-weight: 800;
-      font-size: 12px;
-      letter-spacing: 1.5px;
+    /* Header */
+    header {
+      background: var(--primary-dark);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
     }
 
-    h1 {
-      font-size: clamp(30px, 5vw, 46px);
-      line-height: 1.2;
-      margin: 12px 0;
-    }
-
-    .hero p {
-      max-width: 660px;
-      color: #e2ebff;
-    }
-
-    .pills {
+    .navbar {
+      min-height: 70px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 20px;
-    }
-
-    .pills span {
-      background: #ffffff15;
-      border: 1px solid #ffffff40;
-      border-radius: 30px;
-      padding: 7px 12px;
-      font-size: 13px;
-    }
-
-    main {
-      max-width: 1080px;
-      margin: 28px auto;
-      padding: 0 16px 40px;
-    }
-
-    .heading {
-      font-size: 26px;
-      margin: 0 0 5px;
-    }
-
-    .muted {
-      color: #68768d;
-      margin-top: 0;
-    }
-
-    .search {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #d9e2ef;
-      border-radius: 12px;
-      font-size: 16px;
-      background: white;
-      margin: 12px 0 22px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 275px), 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e0e8f3;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 8px 26px #193e7210;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-head {
-      padding: 22px;
-      background: linear-gradient(135deg, #e4efff, #f7faff);
-      min-height: 150px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #dce9ff;
-      color: #164b9a;
-      font-size: 12px;
-      font-weight: 800;
-      padding: 5px 10px;
-      border-radius: 20px;
-    }
-
-    .card h3 {
-      margin: 12px 0 4px;
-      font-size: 22px;
-    }
-
-    .card-body {
-      padding: 20px;
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-    }
-
-    .features {
-      padding-left: 20px;
-      color: #48566c;
-      font-size: 14px;
-      margin: 0 0 16px;
-    }
-
-    .price-row {
-      display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      margin-top: auto;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
       padding: 12px 0;
     }
 
-    .price {
-      font-size: 30px;
-      font-weight: 900;
-      color: #123f8b;
-    }
-
-    .price small {
-      font-size: 12px;
-      color: #68768d;
-      font-weight: 500;
-    }
-
-    .btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border: 0;
-      border-radius: 11px;
-      padding: 12px 14px;
+    .brand {
+      font-size: 19px;
       font-weight: 800;
-      cursor: pointer;
-      transition: transform .2s, filter .2s;
+      letter-spacing: 0.3px;
     }
 
-    .btn:hover {
-      filter: brightness(.96);
-      transform: translateY(-1px);
+    .brand span {
+      color: var(--accent);
     }
 
-    .blue {
-      background: #0b4bb3;
-      color: white;
+    .nav-link {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 8px 15px;
+      border-radius: 9px;
+      font-size: 14px;
+      transition: 0.2s;
     }
 
-    .green {
-      background: #168447;
-      color: white;
-      margin-top: 10px;
-    }
-
-    .section {
-      margin-top: 30px;
+    .nav-link:hover {
       background: white;
-      border: 1px solid #e0e8f3;
-      border-radius: 18px;
-      padding: 20px;
+      color: var(--primary-dark);
     }
 
-    .samples {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 16px;
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #102b52, #1e5b91);
+      color: white;
+      padding: 52px 0 48px;
+      text-align: center;
     }
 
-    .sample-link {
-      display: block;
-      background: #f1f5fb;
-      border: 1px solid #e1e7f0;
-      border-radius: 12px;
-      overflow: hidden;
+    .hero-label {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      margin-bottom: 14px;
     }
 
-    .sample-link img {
+    .hero h1 {
+      font-size: clamp(27px, 5vw, 42px);
+      line-height: 1.3;
+      margin-bottom: 13px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #e2ecf8;
+      font-size: 16px;
+    }
+
+    /* Common sections */
+    .section {
+      padding: 38px 0;
+    }
+
+    .section-heading {
+      font-size: clamp(23px, 4vw, 30px);
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* Search */
+    .search-wrap {
+      margin: 24px 0 0;
+    }
+
+    .search-input {
       display: block;
       width: 100%;
-      height: auto;
-      min-height: 100px;
-      object-fit: contain;
-      background: #eef2f8;
-    }
-
-    .sample-label {
-      display: block;
-      padding: 9px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #34445f;
-      text-align: center;
-    }
-
-    .topic-box {
-      margin-top: 30px;
-      padding: 24px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #e9f1ff, #ffffff);
-      border: 1px solid #d7e5fb;
-    }
-
-    .topic-box p {
-      color: #53627a;
-    }
-
-    .topic-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #123f8b;
-      color: #fff;
-      padding: 12px 18px;
+      max-width: 520px;
+      padding: 13px 16px;
+      border: 1px solid #cbd5e1;
       border-radius: 11px;
+      background: white;
+      outline: none;
+      box-shadow: 0 3px 12px rgba(15, 40, 75, 0.04);
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(18, 57, 107, 0.1);
+    }
+
+    /* Product card */
+    .product-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 760px);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(20, 45, 80, 0.07);
+    }
+
+    .product-top {
+      padding: 25px;
+    }
+
+    .product-category {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .product-card h3 {
+      font-size: 25px;
+      margin-bottom: 5px;
+      color: var(--primary-dark);
+    }
+
+    .product-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .product-description {
+      margin-bottom: 15px;
+    }
+
+    .features {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      margin: 15px 0 22px;
+    }
+
+    .features li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: var(--green);
       font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* Pricing */
+    .price-box {
+      border: 1px solid #dce7f4;
+      background: #f7faff;
+      border-radius: 14px;
+      padding: 17px;
+      margin: 18px 0;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .price-line {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .old-price {
+      color: #7b8798;
+      text-decoration: line-through;
+      font-size: 19px;
+    }
+
+    .selling-price {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--green);
+      line-height: 1.3;
+    }
+
+    .discount-badge {
+      display: inline-block;
+      background: #fff0d2;
+      color: #8b5200;
+      padding: 5px 10px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .saving-text {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 700;
       margin-top: 6px;
     }
 
-    .order-info {
-      background: #fff;
-      border: 1px solid #e0e8f3;
-      border-radius: 18px;
-      padding: 22px;
-      margin-top: 30px;
+    /* Buttons */
+    .button-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
     }
 
-    .order-info ul {
-      padding-left: 22px;
-      color: #48566c;
-    }
-
-    .order-info .btn {
-      margin-top: 16px;
-    }
-
-    footer {
-      background: #0b2048;
-      color: #dce6ff;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 11px 17px;
+      border-radius: 10px;
+      font-weight: 700;
       text-align: center;
-      padding: 25px 15px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.94;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-whatsapp {
+      background: #168447;
+      color: white;
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border-color: #cbd8e8;
+    }
+
+    /* Sample gallery */
+    .sample-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .sample-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(20, 45, 80, 0.05);
+    }
+
+    .sample-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      background: #e9eef5;
+      cursor: zoom-in;
+    }
+
+    .sample-caption {
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .gallery-note {
+      color: var(--muted);
       font-size: 13px;
+      margin-top: 13px;
+    }
+
+    /* Order instructions */
+    .info-panel {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 23px;
+    }
+
+    .info-panel h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+    }
+
+    .info-panel ol {
+      padding-left: 23px;
+    }
+
+    .info-panel li {
+      margin: 7px 0;
+    }
+
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #fff8e9;
+      padding: 12px 15px;
+      border-radius: 5px;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    /* Image viewer */
+    .image-viewer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(4, 13, 27, 0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .image-viewer.open {
+      display: flex;
+    }
+
+    .image-viewer img {
+      max-width: min(100%, 900px);
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .viewer-close {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      border: none;
+      background: white;
+      color: #111827;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-dark);
+      color: #dce7f4;
+      padding: 25px 0;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
     }
 
     footer a {
-      color: #fff;
+      color: white;
       text-decoration: underline;
     }
 
-    [hidden] {
-      display: none !important;
+    .empty-message {
+      display: none;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      color: var(--muted);
     }
 
-    @media (min-width: 700px) {
-      .samples {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 480px) {
-      .topbar {
-        padding: 13px 4%;
-      }
-
-      .brand {
-        font-size: 14px;
-      }
-
-      .back {
-        font-size: 12px;
+    @media (max-width: 760px) {
+      .sample-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .hero {
-        padding: 32px 17px;
+        padding: 39px 0;
       }
 
-      .section,
-      .order-info,
-      .topic-box {
-        padding: 17px;
+      .product-top {
+        padding: 19px;
+      }
+
+      .button-row .btn {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand {
+        font-size: 16px;
+      }
+
+      .sample-grid {
+        gap: 10px;
+      }
+
+      .selling-price {
+        font-size: 30px;
       }
     }
   </style>
 </head>
 
 <body>
-  <nav class="topbar">
-    <a class="brand" href="index.html">BALAJI DIGITAL SEVA</a>
-    <a class="back" href="index.html">← मुख्य वेबसाइट</a>
-  </nav>
 
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">STUDY SMART • PREPARE BETTER</div>
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        BALAJI <span>DIGITAL SEVA</span>
+      </a>
 
-      <h1>Competitive Exams<br>Notes Store</h1>
-
-      <p>
-        प्रतियोगी परीक्षाओं की तैयारी के लिए नोट्स चुनें।
-        सैंपल पेज और विषय-सूची देखकर WhatsApp पर ऑर्डर करें।
-      </p>
-
-      <div class="pills">
-        <span>📚 विषय के अनुसार नोट्स</span>
-        <span>👀 सैंपल पेज देखें</span>
-        <span>📑 विषय-सूची</span>
-        <span>💬 WhatsApp ऑर्डर</span>
-      </div>
+      <a class="nav-link" href="index.html">
+        ← मुख्य वेबसाइट पर जाएँ
+      </a>
     </div>
   </header>
 
-  <main>
-    <h2 class="heading">अपनी परीक्षा के नोट्स चुनें</h2>
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label">अध्ययन सामग्री एवं परीक्षा तैयारी</div>
 
-    <p class="muted">
-      फिलहाल CG Vyapam के नोट्स उपलब्ध हैं।
-      भविष्य में दूसरे विषय और परीक्षाएँ भी इसी स्टोर में जोड़ी जा सकती हैं।
-    </p>
+      <h1>Competitive Exams Notes Store</h1>
 
-    <input
-      id="search"
-      class="search"
-      type="search"
-      placeholder="नोट्स या विषय खोजें..."
-      aria-label="नोट्स खोजें"
-    >
-
-    <div class="grid" id="notesGrid">
-
-      <article
-        class="card"
-        data-search="cg vyapam chhattisgarh छत्तीसगढ़ सामान्य ज्ञान gk हस्तलिखित नोट्स"
-      >
-        <div class="card-head">
-          <span class="tag">अभी उपलब्ध</span>
-          <h3>छत्तीसगढ़ सामान्य ज्ञान</h3>
-          <div>CG Vyapam • हस्तलिखित नोट्स</div>
-        </div>
-
-        <div class="card-body">
-          <ul class="features">
-            <li>छत्तीसगढ़ सामान्य ज्ञान के नोट्स</li>
-            <li>नोट्स के असली सैंपल पेज देखें</li>
-            <li>अलग पेज पर विषय-सूची देखें</li>
-            <li>ऑर्डर के लिए WhatsApp संपर्क</li>
-          </ul>
-
-          <div class="price-row">
-            <div class="price">₹100 <small>एक बार</small></div>
-          </div>
-
-          <a class="btn blue" href="#samples">
-            📖 सैंपल पेज देखें
-          </a>
-
-          <a class="btn blue" href="topics.html" style="margin-top:10px">
-            📑 पूरी विषय-सूची देखें
-          </a>
-
-          <a
-            class="btn green"
-            href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20CG%20Vyapam%20Chhattisgarh%20GK%20handwritten%20notes%20Rs%20100%20order%20karne%20hain."
-            target="_blank"
-            rel="noopener"
-          >
-            🛒 Place Order — ₹100
-          </a>
-        </div>
-      </article>
-
-      <!--
-        भविष्य में नए नोट्स जोड़ने के लिए:
-        इस article कार्ड को कॉपी करें।
-        उसका नाम, data-search, विवरण, कीमत और WhatsApp संदेश बदलें।
-        केवल वही नोट्स उपलब्ध दिखाएँ जो वास्तव में तैयार हों।
-      -->
-
+      <p>
+        CG Vyapam एवं अन्य प्रतियोगी परीक्षाओं की तैयारी के लिए
+        व्यवस्थित अध्ययन सामग्री, सैंपल पेज और विषय-सूची देखें।
+      </p>
     </div>
+  </section>
 
-    <section class="section" id="samples">
-      <h2 class="heading">📖 नोट्स के सैंपल पेज</h2>
+  <main class="container">
 
-      <p class="muted">
-        खरीदने से पहले नोट्स के असली नमूने देखें।
-        किसी तस्वीर पर क्लिक करके उसे बड़े आकार में खोल सकते हैं।
+    <!-- Product section -->
+    <section class="section" id="products">
+      <h2 class="section-heading">उपलब्ध अध्ययन सामग्री</h2>
+
+      <p class="section-description">
+        नोट्स की जानकारी, सैंपल पेज और विषय-सूची देखकर अपना ऑर्डर करें।
       </p>
 
-      <div class="samples">
-        <a
-          class="sample-link"
-          href="assets/notes/sample 1.jpg"
-          target="_blank"
-          rel="noopener"
+      <div class="search-wrap">
+        <input
+          class="search-input"
+          type="search"
+          id="productSearch"
+          placeholder="नोट्स खोजें..."
+          aria-label="नोट्स खोजें"
         >
-          <img
-            src="assets/notes/sample 1.jpg"
-            alt="CG Vyapam नोट्स सैंपल पेज 1"
-            loading="lazy"
-          >
-          <span class="sample-label">सैंपल पेज 1</span>
-        </a>
+      </div>
 
-        <a
-          class="sample-link"
-          href="assets/notes/sample 2.jpg"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="assets/notes/sample 2.jpg"
-            alt="CG Vyapam नोट्स सैंपल पेज 2"
-            loading="lazy"
-          >
-          <span class="sample-label">सैंपल पेज 2</span>
-        </a>
+      <div class="product-grid" id="productGrid" style="margin-top: 22px;">
 
-        <a
-          class="sample-link"
-          href="assets/notes/sample 3.jpg"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="assets/notes/sample 3.jpg"
-            alt="CG Vyapam नोट्स सैंपल पेज 3"
-            loading="lazy"
-          >
-          <span class="sample-label">सैंपल पेज 3</span>
-        </a>
+        <article class="product-card" data-search="छत्तीसगढ़ सामान्य ज्ञान cg vyapam chhattisgarh gk">
 
-        <a
-          class="sample-link"
-          href="assets/notes/sample 4.jpg"
-          target="_blank"
-          rel="noopener"
-        >
+          <div class="product-top">
+
+            <div class="product-category">
+              CG VYAPAM • प्रतियोगी परीक्षा
+            </div>
+
+            <h3>छत्तीसगढ़ सामान्य ज्ञान</h3>
+
+            <p class="product-subtitle">
+              CG Vyapam • विस्तृत अध्ययन सामग्री
+            </p>
+
+            <p class="product-description">
+              छत्तीसगढ़ सामान्य ज्ञान की तैयारी के लिए विषयवार
+              अध्ययन सामग्री। ऑर्डर करने से पहले उपलब्ध सैंपल पेज
+              और पूरी विषय-सूची देख सकते हैं।
+            </p>
+
+            <ul class="features">
+              <li>विस्तृत एवं अध्यायवार अध्ययन सामग्री</li>
+              <li>महत्वपूर्ण तथ्यों और अवधारणाओं की व्याख्या</li>
+              <li>नोट्स के सैंपल पेज और पूरी विषय-सूची</li>
+              <li>परीक्षा उपयोगी प्रश्न एवं अभ्यास सामग्री</li>
+            </ul>
+
+            <!-- Price -->
+            <div class="price-box">
+              <div class="price-label">विशेष बिक्री मूल्य</div>
+
+              <div class="price-line">
+                <span class="old-price">₹250</span>
+                <span class="selling-price">₹190</span>
+                <span class="discount-badge">24% OFF</span>
+              </div>
+
+              <p class="saving-text">
+                🎉 आपको ₹60 की बचत होगी!
+              </p>
+            </div>
+
+            <!-- Product actions -->
+            <div class="button-row">
+              <a class="btn btn-primary" href="#samples">
+                📖 सैंपल पेज देखें
+              </a>
+
+              <a class="btn btn-outline" href="topics.html">
+                📑 विषय-सूची देखें
+              </a>
+
+              <a
+                class="btn btn-whatsapp"
+                href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20CG%20Vyapam%20Chhattisgarh%20GK%20study%20notes%20order%20karne%20hain.%20Selling%20price%20Rs%20190%20hai."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp से ऑर्डर करें
+              </a>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+      <p class="empty-message" id="emptyMessage">
+        आपकी खोज से संबंधित कोई नोट्स नहीं मिले।
+      </p>
+    </section>
+
+    <!-- Sample pages -->
+    <section class="section" id="samples">
+      <h2 class="section-heading">नोट्स के सैंपल पेज</h2>
+
+      <p class="section-description">
+        नीचे दिए गए पेज देखकर नोट्स की सामग्री और लिखने की शैली का
+        नमूना देख सकते हैं। किसी फोटो पर क्लिक करके उसे बड़ा खोलें।
+      </p>
+
+      <div class="sample-grid">
+
+        <div class="sample-card">
           <img
-            src="assets/notes/sample 4.jpg"
-            alt="CG Vyapam नोट्स सैंपल पेज 4"
+            class="sample-image"
+            src="assets/notes/sample%201.jpg"
+            alt="छत्तीसगढ़ सामान्य ज्ञान नोट्स सैंपल पेज 1"
             loading="lazy"
           >
-          <span class="sample-label">सैंपल पेज 4</span>
+          <div class="sample-caption">सैंपल पेज 1</div>
+        </div>
+
+        <div class="sample-card">
+          <img
+            class="sample-image"
+            src="assets/notes/sample%202.jpg"
+            alt="छत्तीसगढ़ सामान्य ज्ञान नोट्स सैंपल पेज 2"
+            loading="lazy"
+          >
+          <div class="sample-caption">सैंपल पेज 2</div>
+        </div>
+
+        <div class="sample-card">
+          <img
+            class="sample-image"
+            src="assets/notes/sample%203.jpg"
+            alt="छत्तीसगढ़ सामान्य ज्ञान नोट्स सैंपल पेज 3"
+            loading="lazy"
+          >
+          <div class="sample-caption">सैंपल पेज 3</div>
+        </div>
+
+        <div class="sample-card">
+          <img
+            class="sample-image"
+            src="assets/notes/sample%204.jpg"
+            alt="छत्तीसगढ़ सामान्य ज्ञान नोट्स सैंपल पेज 4"
+            loading="lazy"
+          >
+          <div class="sample-caption">सैंपल पेज 4</div>
+        </div>
+
+      </div>
+
+      <p class="gallery-note">
+        नोट: सैंपल फोटो आपके वेबसाइट फोल्डर में उपलब्ध फाइलों के
+        नाम और स्थान के अनुसार दिखाई देंगे।
+      </p>
+
+      <div class="button-row">
+        <a class="btn btn-outline" href="topics.html">
+          पूरी विषय-सूची देखें
         </a>
       </div>
     </section>
 
-    <section class="topic-box">
-      <h2 class="heading">📑 नोट्स में कौन-कौन से टॉपिक हैं?</h2>
+    <!-- Ordering information -->
+    <section class="section" id="order">
+      <h2 class="section-heading">ऑर्डर कैसे करें?</h2>
 
-      <p>
-        नोट्स खरीदने से पहले पूरी विषय-सूची अलग पेज पर देखें।
-        इससे आपको नोट्स में शामिल अध्यायों की जानकारी मिल सकेगी।
+      <p class="section-description">
+        नोट्स खरीदने के लिए नीचे दिए गए चरणों का पालन करें।
       </p>
 
-      <a class="topic-btn" href="topics.html">
-        पूरी विषय-सूची देखें →
-      </a>
+      <div class="info-panel">
+        <h3>ऑर्डर करने की प्रक्रिया</h3>
+
+        <ol>
+          <li>पहले सैंपल पेज और विषय-सूची देखें।</li>
+          <li>WhatsApp पर नोट्स खरीदने के लिए संदेश भेजें।</li>
+          <li>भुगतान की जानकारी और उपलब्ध भुगतान विकल्प WhatsApp पर प्राप्त करें।</li>
+          <li>भुगतान की पुष्टि होने के बाद नोट्स प्राप्त करने की प्रक्रिया पूरी करें।</li>
+        </ol>
+
+        <div class="notice">
+          <strong>कीमत:</strong> मूल कीमत ₹250 है। वर्तमान बिक्री मूल्य ₹190 है,
+          यानी ₹60 की छूट। भुगतान करने से पहले WhatsApp पर ऑर्डर और
+          डिलीवरी की जानकारी की पुष्टि कर लें।
+        </div>
+
+        <div class="button-row">
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20CG%20Vyapam%20study%20notes%20Rs%20190%20mein%20order%20karne%20hain."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp पर संपर्क करें
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section class="order-info">
-      <h2 class="heading">🛒 ऑर्डर कैसे करें?</h2>
-
-      <ul>
-        <li>नोट्स के सैंपल पेज और विषय-सूची देख लें।</li>
-        <li>₹100 वाले Place Order बटन पर क्लिक करें।</li>
-        <li>WhatsApp पर खुलने वाले संदेश को भेजकर ऑर्डर की प्रक्रिया शुरू करें।</li>
-        <li>आगे की भुगतान प्रक्रिया WhatsApp पर बताई जाएगी।</li>
-      </ul>
-
-      <a
-        class="btn green"
-        href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20CG%20Vyapam%20GK%20notes%20Rs%20100%20order%20karne%20hain."
-        target="_blank"
-        rel="noopener"
-      >
-        💬 WhatsApp पर ऑर्डर शुरू करें
-      </a>
-
-      <p class="muted">
-        नोट: फिलहाल यह बटन WhatsApp पर संदेश खोलता है।
-        ऑटोमेटेड ऑर्डर और पेमेंट प्रक्रिया बाद में अलग से सेटअप की जाएगी।
-      </p>
-    </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <strong>Balaji Digital Seva</strong><br>
-    प्रतियोगी परीक्षा नोट्स स्टोर<br>
-    <a href="index.html">मुख्य वेबसाइट पर वापस जाएँ</a><br><br>
-    © Balaji Digital Seva
+    <div class="container">
+      <p><strong>Balaji Digital Seva</strong></p>
+      <p>आपकी डिजिटल सेवा, आपके पास।</p>
+      <p style="margin-top: 8px;">
+        <a href="index.html">मुख्य वेबसाइट</a>
+        &nbsp; | &nbsp;
+        <a href="topics.html">नोट्स की विषय-सूची</a>
+      </p>
+    </div>
   </footer>
 
+  <!-- Image viewer -->
+  <div
+    class="image-viewer"
+    id="imageViewer"
+    role="dialog"
+    aria-modal="true"
+    aria-label="सैंपल फोटो बड़ा करके देखें"
+  >
+    <button
+      class="viewer-close"
+      id="viewerClose"
+      type="button"
+      aria-label="फोटो बंद करें"
+    >×</button>
+
+    <img id="viewerImage" src="" alt="बड़ा सैंपल पेज">
+  </div>
+
   <script>
-    const searchInput = document.getElementById('search');
-    const noteCards = document.querySelectorAll('#notesGrid .card');
+    // Product search
+    const productSearch = document.getElementById("productSearch");
+    const productCards = document.querySelectorAll(".product-card");
+    const emptyMessage = document.getElementById("emptyMessage");
 
-    searchInput.addEventListener('input', function () {
-      const term = this.value.trim().toLowerCase();
+    productSearch.addEventListener("input", function () {
+      const query = this.value.trim().toLocaleLowerCase("hi");
+      let visibleCount = 0;
 
-      noteCards.forEach(function (card) {
-        const text = (card.dataset.search || '').toLowerCase();
-        card.hidden = !text.includes(term);
+      productCards.forEach(function (card) {
+        const searchableText =
+          (card.innerText + " " + (card.dataset.search || ""))
+          .toLocaleLowerCase("hi");
+
+        const matches = searchableText.includes(query);
+
+        card.style.display = matches ? "" : "none";
+
+        if (matches) {
+          visibleCount++;
+        }
+      });
+
+      emptyMessage.style.display = visibleCount ? "none" : "block";
+    });
+
+    // Sample image viewer
+    const imageViewer = document.getElementById("imageViewer");
+    const viewerImage = document.getElementById("viewerImage");
+    const viewerClose = document.getElementById("viewerClose");
+    const sampleImages = document.querySelectorAll(".sample-image");
+
+    sampleImages.forEach(function (image) {
+      image.addEventListener("click", function () {
+        viewerImage.src = image.src;
+        viewerImage.alt = image.alt;
+        imageViewer.classList.add("open");
+        document.body.style.overflow = "hidden";
       });
     });
+
+    function closeImageViewer() {
+      imageViewer.classList.remove("open");
+      viewerImage.src = "";
+      document.body.style.overflow = "";
+    }
+
+    viewerClose.addEventListener("click", closeImageViewer);
+
+    imageViewer.addEventListener("click", function (event) {
+      if (event.target === imageViewer) {
+        closeImageViewer();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeImageViewer();
+      }
+    });
   </script>
+
 </body>
 </html>
-```
