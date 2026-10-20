@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>भारतीय संविधान एवं राजव्यवस्था नोट्स | Balaji Digital Seva</title>
+
+  <meta name="description" content="भारतीय संविधान एवं राजव्यवस्था के विस्तृत अध्यायवार नोट्स। विषय-सूची, सैंपल पेज और विशेष कीमत देखें।">
+
+  <meta name="theme-color" content="#102b52">
+
+  <style>
+    :root {
+      --primary: #12396b;
+      --dark: #0b2445;
+      --accent: #f5a623;
+      --green: #14804a;
+      --bg: #f4f7fb;
+      --text: #172b4d;
+      --muted: #64748b;
+      --border: #e1e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 15px #0002;
+    }
+
+    .navbar {
+      min-height: 68px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-link {
+      padding: 8px 13px;
+      border: 1px solid #ffffff44;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #102b52, #1e5b91);
+      color: white;
+      text-align: center;
+      padding: 48px 0;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: #ffffff20;
+      border: 1px solid #ffffff40;
+      padding: 5px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 13px;
+    }
+
+    .hero h1 {
+      font-size: clamp(27px, 5vw, 41px);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      color: #e2ecf8;
+    }
+
+    .section {
+      padding: 36px 0;
+    }
+
+    .section-heading {
+      font-size: clamp(23px, 4vw, 30px);
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .product-card {
+      max-width: 800px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px #142d5010;
+    }
+
+    .product-content {
+      padding: clamp(18px, 4vw, 28px);
+    }
+
+    .category {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .product-card h2 {
+      font-size: clamp(24px, 4vw, 31px);
+      color: var(--dark);
+      line-height: 1.4;
+      margin-bottom: 7px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 17px;
+    }
+
+    .features {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      margin: 18px 0 23px;
+    }
+
+    .features li {
+      display: flex;
+      gap: 10px;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .price-box {
+      background: #f7faff;
+      border: 1px solid #dce7f4;
+      border-radius: 13px;
+      padding: 17px;
+      margin: 20px 0;
+    }
+
+    .price-label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .price-line {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .old-price {
+      color: #7b8798;
+      text-decoration: line-through;
+      font-size: 20px;
+    }
+
+    .selling-price {
+      color: var(--green);
+      font-size: 35px;
+      font-weight: 800;
+    }
+
+    .discount {
+      background: #fff0d2;
+      color: #8b5200;
+      border-radius: 7px;
+      padding: 5px 9px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .saving {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 11px 16px;
+      border-radius: 9px;
+      font-weight: 700;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--primary);
+    }
+
+    .btn-whatsapp {
+      color: white;
+      background: #168447;
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 1px solid #cbd8e8;
+    }
+
+    .sample-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .sample-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .sample-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      background: #e9eef5;
+      cursor: zoom-in;
+    }
+
+    .sample-caption {
+      text-align: center;
+      padding: 10px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .info-panel {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .info-panel h3 {
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+
+    .info-panel ol {
+      padding-left: 23px;
+    }
+
+    .info-panel li {
+      margin: 7px 0;
+    }
+
+    .notice {
+      margin-top: 15px;
+      padding: 12px 15px;
+      border-left: 4px solid var(--accent);
+      background: #fff8e9;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .viewer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: #040d1bf0;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .viewer.open {
+      display: flex;
+    }
+
+    .viewer img {
+      max-width: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .close-viewer {
+      position: absolute;
+      top: 12px;
+      right: 18px;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #dce7f4;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    footer a {
+      text-decoration: underline;
+      color: white;
+    }
+
+    @media (max-width: 720px) {
+      .sample-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero {
+        padding: 38px 0;
+      }
+
+      .button-row .btn {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand {
+        font-size: 15px;
+      }
+
+      .selling-price {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        BALAJI <span>DIGITAL SEVA</span>
+      </a>
+
+      <a class="nav-link" href="index.html">
+        ← मुख्य वेबसाइट
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label">प्रतियोगी परीक्षा अध्ययन सामग्री</div>
+
+      <h1>भारतीय संविधान एवं राजव्यवस्था</h1>
+
+      <p>
+        संविधान, मौलिक अधिकार, संसद, न्यायपालिका, संवैधानिक संस्थाओं
+        और छत्तीसगढ़ की प्रशासनिक संरचना जैसे महत्वपूर्ण विषयों की
+        अध्यायवार तैयारी के लिए अध्ययन सामग्री।
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section" id="product">
+      <h2 class="section-heading">संविधान नोट्स</h2>
+
+      <p class="section-description">
+        सैंपल पेज और पूरी विषय-सूची देखकर नोट्स की जानकारी प्राप्त करें।
+      </p>
+
+      <article class="product-card">
+        <div class="product-content">
+
+          <div class="category">CG VYAPAM • INDIAN POLITY</div>
+
+          <h2>भारतीय संविधान एवं राजव्यवस्था नोट्स</h2>
+
+          <p class="subtitle">
+            विस्तृत अध्यायवार अध्ययन सामग्री
+          </p>
+
+          <p>
+            प्रतियोगी परीक्षाओं की तैयारी के लिए भारतीय संविधान एवं
+            राजव्यवस्था के प्रमुख विषयों को व्यवस्थित रूप से पढ़ने
+            हेतु तैयार की गई अध्ययन सामग्री।
+          </p>
+
+          <ul class="features">
+            <li>संविधान के महत्वपूर्ण विषयों का अध्यायवार विवरण</li>
+            <li>प्रस्तावना, मौलिक अधिकार एवं नीति-निदेशक तत्व</li>
+            <li>राष्ट्रपति, संसद, न्यायपालिका एवं संवैधानिक संस्थाएँ</li>
+            <li>संविधान की अनुसूचियाँ, अनुच्छेद और संशोधन</li>
+            <li>छत्तीसगढ़ की संवैधानिक एवं प्रशासनिक संरचना</li>
+            <li>अभ्यास प्रश्न एवं पुनरावृत्ति सामग्री</li>
+          </ul>
+
+          <div class="price-box">
+            <div class="price-label">विशेष बिक्री मूल्य</div>
+
+            <div class="price-line">
+              <span class="old-price">₹250</span>
+              <span class="selling-price">₹190</span>
+              <span class="discount">24% OFF</span>
+            </div>
+
+            <p class="saving">आपकी बचत: ₹60</p>
+          </div>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="#samples">
+              📖 सैंपल पेज देखें
+            </a>
+
+            <a class="btn btn-outline" href="topics.html">
+              📑 पूरी विषय-सूची
+            </a>
+
+            <a
+              class="btn btn-whatsapp"
+              href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20Bharatiya%20Samvidhan%20evam%20Rajvyavastha%20notes%20Rs%20190%20mein%20order%20karne%20hain."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp से ऑर्डर करें
+            </a>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="samples">
+      <h2 class="section-heading">सैंपल पेज</h2>
+
+      <p class="section-description">
+        नीचे दिए गए चार पेज नोट्स का नमूना दिखाने के लिए हैं।
+        किसी फोटो पर क्लिक करके उसे बड़ा देखें।
+      </p>
+
+      <div class="sample-grid">
+
+        <div class="sample-card">
+          <img
+            class="sample-image"
+            src="assets/notes/sample-1.jpg"
+            alt="भारतीय संविधान नोट्स सैंपल पेज 1"
+            loading="lazy"
+          >
+          <div class="sample-caption">सैंपल पेज 1</div>
+        </div>
+
+        <div class="sample-card">
+          <img
+            class="sample-image"
+            src="assets/notes/sample-2.jpg"
+            alt="भारतीय संविधान नोट्स सैंपल पेज 2"
+            loading="lazy"
+          >
+          <div class="sample-caption">सैंपल पेज 2</div>
+        </div>
+
+        <div class="sample-card">
+          <img
+            class="sample-image"
+            src="assets/notes/sample-3.jpg"
+            alt="भारतीय संविधान नोट्स सैंपल पेज 3"
+            loading="lazy"
+          >
+          <div class="sample-caption">सैंपल पेज 3</div>
+        </div>
+
+        <div class="sample-card">
+          <img
+            class="sample-image"
+            src="assets/notes/sample-4.jpg"
+            alt="भारतीय संविधान नोट्स सैंपल पेज 4"
+            loading="lazy"
+          >
+          <div class="sample-caption">सैंपल पेज 4</div>
+        </div>
+
+      </div>
+
+      <div class="button-row">
+        <a class="btn btn-outline" href="topics.html">
+          पूरी विषय-सूची देखें
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <h2 class="section-heading">ऑर्डर कैसे करें?</h2>
+
+      <div class="info-panel">
+        <h3>ऑर्डर करने की प्रक्रिया</h3>
+
+        <ol>
+          <li>नोट्स के सैंपल पेज और विषय-सूची देखें।</li>
+          <li>WhatsApp ऑर्डर बटन पर क्लिक करें।</li>
+          <li>भुगतान का तरीका और नोट्स प्राप्त करने की प्रक्रिया पूछें।</li>
+          <li>भुगतान करने से पहले सभी विवरणों की पुष्टि करें।</li>
+        </ol>
+
+        <div class="notice">
+          <strong>कीमत:</strong> मूल कीमत ₹250, बिक्री मूल्य ₹190 और
+          छूट ₹60 है। यह पेज कीमत दिखाता है; भुगतान और PDF डिलीवरी
+          की पुष्टि अलग से करनी होगी।
+        </div>
+
+        <div class="button-row">
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20Bharatiya%20Samvidhan%20notes%20ke%20order%20aur%20payment%20ki%20jankari%20chahiye."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp पर संपर्क करें
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Balaji Digital Seva</strong></p>
+      <p>आपकी डिजिटल सेवा, आपके पास।</p>
+      <p style="margin-top: 8px;">
+        <a href="index.html">मुख्य वेबसाइट</a>
+        &nbsp; | &nbsp;
+        <a href="topics.html">संविधान नोट्स की विषय-सूची</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="viewer" id="viewer" role="dialog" aria-modal="true">
+    <button class="close-viewer" id="closeViewer" aria-label="बंद करें">
+      ×
+    </button>
+    <img id="viewerImage" src="" alt="बड़ा सैंपल पेज">
+  </div>
+
+  <script>
+    const viewer = document.getElementById("viewer");
+    const viewerImage = document.getElementById("viewerImage");
+    const closeViewer = document.getElementById("closeViewer");
+
+    document.querySelectorAll(".sample-image").forEach(function (img) {
+      img.addEventListener("click", function () {
+        viewerImage.src = img.src;
+        viewerImage.alt = img.alt;
+        viewer.classList.add("open");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    function hideViewer() {
+      viewer.classList.remove("open");
+      viewerImage.src = "";
+      document.body.style.overflow = "";
+    }
+
+    closeViewer.addEventListener("click", hideViewer);
+
+    viewer.addEventListener("click", function (event) {
+      if (event.target === viewer) {
+        hideViewer();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        hideViewer();
+      }
+    });
+  </script>
+
+</body>
+</html>
