@@ -1,1 +1,501 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>संविधान नोट्स की विषय-सूची | Balaji Digital Seva</title>
+  <meta name="description" content="भारतीय संविधान एवं राजव्यवस्था नोट्स की 24 अध्यायों वाली विस्तृत विषय-सूची।">
+  <meta name="theme-color" content="#102b52">
+
+  <style>
+    :root {
+      --primary: #12396b;
+      --dark: #0b2445;
+      --accent: #f5a623;
+      --green: #14804a;
+      --bg: #f4f7fb;
+      --text: #172b4d;
+      --muted: #64748b;
+      --border: #e1e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(950px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+    }
+
+    .navbar {
+      min-height: 68px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 13px 0;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-link {
+      padding: 7px 12px;
+      border: 1px solid #ffffff55;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #102b52, #1e5b91);
+      color: white;
+      text-align: center;
+      padding: 42px 0;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: #ffffff20;
+      border: 1px solid #ffffff40;
+      padding: 5px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(26px, 5vw, 38px);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #e2ecf8;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    main {
+      padding: 30px 0 42px;
+    }
+
+    .summary {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+
+    .summary strong {
+      color: var(--primary);
+    }
+
+    .chapter-list {
+      display: grid;
+      gap: 11px;
+    }
+
+    .chapter {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px 17px;
+      box-shadow: 0 3px 12px #142d5008;
+    }
+
+    .number {
+      flex: 0 0 38px;
+      height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 9px;
+      background: #eaf1fb;
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .chapter h2 {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .chapter p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .note {
+      background: #fff8e9;
+      border-left: 4px solid var(--accent);
+      border-radius: 7px;
+      padding: 13px 15px;
+      margin-top: 22px;
+      font-size: 14px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 11px 16px;
+      border-radius: 9px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--primary);
+    }
+
+    .btn-whatsapp {
+      color: white;
+      background: #168447;
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 1px solid #cbd8e8;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #dce7f4;
+      text-align: center;
+      padding: 23px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .chapter {
+        padding: 13px;
+        gap: 11px;
+      }
+
+      .chapter h2 {
+        font-size: 15px;
+      }
+
+      .button-row .btn {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        BALAJI <span>DIGITAL SEVA</span>
+      </a>
+
+      <a class="nav-link" href="constitution.html">
+        ← संविधान नोट्स पर वापस जाएँ
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label">24 अध्याय • अध्यायवार अध्ययन सामग्री</div>
+      <h1>भारतीय संविधान एवं राजव्यवस्था</h1>
+      <p>
+        नोट्स में शामिल विषयों की विस्तृत सूची।
+        खरीदने से पहले सभी अध्यायों के नाम देखकर सामग्री की जानकारी प्राप्त करें।
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <div class="summary">
+      <strong>विषय-सूची में कुल 24 अध्याय हैं।</strong>
+      इनमें भारतीय संविधान, शासन व्यवस्था, संवैधानिक संस्थाएँ,
+      छत्तीसगढ़ की प्रशासनिक संरचना और अभ्यास सामग्री शामिल हैं।
+    </div>
+
+    <section class="chapter-list" aria-label="संविधान नोट्स के अध्याय">
+
+      <article class="chapter">
+        <div class="number">01</div>
+        <div>
+          <h2>संविधान का परिचय एवं ऐतिहासिक विकास</h2>
+          <p>संविधान की अवधारणा, विकास और ऐतिहासिक पृष्ठभूमि।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">02</div>
+        <div>
+          <h2>प्रस्तावना एवं संविधान की प्रमुख विशेषताएँ</h2>
+          <p>प्रस्तावना, संवैधानिक आदर्श और प्रमुख विशेषताएँ।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">03</div>
+        <div>
+          <h2>नागरिकता एवं मौलिक अधिकार</h2>
+          <p>नागरिकता से जुड़े प्रावधान और मौलिक अधिकार।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">04</div>
+        <div>
+          <h2>नीति-निदेशक तत्व एवं मौलिक कर्तव्य</h2>
+          <p>राज्य के नीति-निदेशक तत्व और नागरिकों के मौलिक कर्तव्य।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">05</div>
+        <div>
+          <h2>राष्ट्रपति, उपराष्ट्रपति एवं प्रधानमंत्री</h2>
+          <p>केंद्र की कार्यपालिका, पद, शक्तियाँ और कार्य।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">06</div>
+        <div>
+          <h2>संसद एवं विधायी प्रक्रिया</h2>
+          <p>संसद की संरचना, सदन, विधेयक और कानून निर्माण।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">07</div>
+        <div>
+          <h2>सर्वोच्च न्यायालय एवं उच्च न्यायालय</h2>
+          <p>न्यायपालिका की संरचना, अधिकार क्षेत्र और प्रमुख कार्य।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">08</div>
+        <div>
+          <h2>राज्यपाल, मुख्यमंत्री एवं राज्य मंत्रिपरिषद</h2>
+          <p>राज्य की कार्यपालिका और उसके संवैधानिक दायित्व।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">09</div>
+        <div>
+          <h2>केंद्र-राज्य संबंध एवं आपातकालीन प्रावधान</h2>
+          <p>संघीय संबंध और आपातकाल से संबंधित संवैधानिक व्यवस्था।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">10</div>
+        <div>
+          <h2>संविधान संशोधन एवं मूल संरचना सिद्धांत</h2>
+          <p>संशोधन की प्रक्रिया और मूल संरचना का सिद्धांत।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">11</div>
+        <div>
+          <h2>संविधान की सभी 12 अनुसूचियाँ</h2>
+          <p>अनुसूचियों का परिचय और उनसे संबंधित प्रावधान।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">12</div>
+        <div>
+          <h2>संवैधानिक संस्थाएँ एवं उनके कार्य</h2>
+          <p>प्रमुख संवैधानिक संस्थाओं की भूमिका और जिम्मेदारियाँ।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">13</div>
+        <div>
+          <h2>पंचायती राज एवं नगरीय स्थानीय स्वशासन</h2>
+          <p>स्थानीय शासन, पंचायतें और नगरीय निकाय।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">14</div>
+        <div>
+          <h2>संवैधानिक एवं वैधानिक संस्थाओं का तुलनात्मक अध्ययन</h2>
+          <p>संस्थाओं की स्थिति, गठन और कार्यों में अंतर।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">15</div>
+        <div>
+          <h2>SC, ST, OBC एवं EWS के संवैधानिक प्रावधान</h2>
+          <p>संबंधित वर्गों के लिए संवैधानिक संरक्षण और प्रावधान।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">16</div>
+        <div>
+          <h2>राजभाषा एवं भाषा संबंधी संवैधानिक प्रावधान</h2>
+          <p>संघ, राज्यों और भाषाओं से संबंधित संवैधानिक व्यवस्था।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">17</div>
+        <div>
+          <h2>आपातकालीन प्रावधानों का विस्तृत पुनरावलोकन</h2>
+          <p>आपातकाल के प्रकार, प्रक्रिया और प्रभावों की पुनरावृत्ति।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">18</div>
+        <div>
+          <h2>संविधान सभा एवं प्रमुख समितियाँ</h2>
+          <p>संविधान निर्माण, सभा और प्रमुख समितियों का परिचय।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">19</div>
+        <div>
+          <h2>प्रमुख अधिनियमों एवं संशोधनों का कालक्रम</h2>
+          <p>महत्वपूर्ण अधिनियमों और संवैधानिक संशोधनों का क्रम।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">20</div>
+        <div>
+          <h2>संविधान के महत्वपूर्ण अनुच्छेद</h2>
+          <p>परीक्षा की दृष्टि से उपयोगी प्रमुख अनुच्छेदों का संकलन।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">21</div>
+        <div>
+          <h2>छत्तीसगढ़ की संवैधानिक एवं प्रशासनिक संरचना</h2>
+          <p>राज्य की शासन व्यवस्था और प्रशासनिक ढाँचा।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">22</div>
+        <div>
+          <h2>छत्तीसगढ़ के संवैधानिक एवं प्रशासनिक आयोग</h2>
+          <p>राज्य से संबंधित आयोगों और संस्थाओं का अध्ययन।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">23</div>
+        <div>
+          <h2>पुराने प्रश्न एवं अभ्यास प्रश्न</h2>
+          <p>प्रश्न-अभ्यास; प्रश्नों का वर्ष और स्रोत उपलब्ध होने पर अलग से दर्शाएँ।</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="number">24</div>
+        <div>
+          <h2>अंतिम पुनरावृत्ति एवं मॉडल टेस्ट</h2>
+          <p>मुख्य तथ्यों का दोहराव और परीक्षा अभ्यास।</p>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="note">
+      <strong>ध्यान दें:</strong> यह अध्यायों की विषय-सूची है।
+      खरीदने से पहले अपने नोट्स की वास्तविक सामग्री से इसका मिलान कर लें।
+      प्रश्नों को सत्यापित पिछले वर्षों के प्रश्न तभी बताएँ जब उनका वर्ष और स्रोत पुष्टि किया गया हो।
+    </div>
+
+    <div class="button-row">
+      <a class="btn btn-primary" href="constitution.html">
+        ← नोट्स और सैंपल पेज पर वापस जाएँ
+      </a>
+
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/917999276798?text=Namaste%2C%20mujhe%20Bharatiya%20Samvidhan%20evam%20Rajvyavastha%20notes%20ki%20jankari%20chahiye."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp पर जानकारी लें
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Balaji Digital Seva</strong></p>
+      <p>आपकी डिजिटल सेवा, आपके पास।</p>
+      <p style="margin-top: 8px;">
+        <a href="index.html">मुख्य वेबसाइट</a>
+        &nbsp; | &nbsp;
+        <a href="constitution.html">संविधान नोट्स</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
